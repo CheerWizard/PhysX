@@ -3032,7 +3032,7 @@ bool NpScene::simulateOrCollide(PxReal elapsedTime, PxBaseTask* completionTask, 
 		{
 			{
 				PX_PROFILE_ZONE("Sim.resetDependencies", getContextId());
-				// Only reset dependencies, etc if we own the TaskManager. Will be false
+				// Only reset dependencies, etc if we own the Threading. Will be false
 				// when an NpScene is controlled by an APEX scene.
 				mTaskManager->resetDependencies();
 			}

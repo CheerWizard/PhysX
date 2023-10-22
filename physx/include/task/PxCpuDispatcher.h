@@ -50,7 +50,7 @@ class PxCpuDispatcher
 {
 public:
 	/**
-	\brief Called by the TaskManager when a task is to be queued for execution.
+	\brief Called by the Threading when a task is to be queued for execution.
 	
 	Upon receiving a task, the dispatcher should schedule the task to run.
 	After the task has been run, it should call the release() method and 
