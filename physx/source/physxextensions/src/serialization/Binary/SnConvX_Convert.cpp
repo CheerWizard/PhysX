@@ -121,7 +121,7 @@ void Sn::ConvX::_enumerateExtraData(const char* address, const MetaClass* mc, Ex
 		const char* entryType = entry.mType;
 
 		//
-		// Insanely Twisted Shadow GeometryUnion
+		// Insanely Twisted ShadowManager GeometryUnion
 		//
 		// Special code is needed as long as there are no meta data tags to describe our unions properly. The way it is done here is
 		// not future-proof at all. There should be a tag to describe where the union type can be found and the number of bytes
