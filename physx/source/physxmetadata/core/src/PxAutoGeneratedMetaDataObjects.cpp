@@ -632,7 +632,7 @@ PX_PHYSX_CORE_API PxConstraintGeneratedInfo::PxConstraintGeneratedInfo()
 	: Scene( "Scene", getPxConstraint_Scene)
 	, Actors( "Actors", "actor0", "actor1", setPxConstraint_Actors, getPxConstraint_Actors)
 	, Flags( "Flags", setPxConstraint_Flags, getPxConstraint_Flags)
-	, IsValid( "IsValid", getPxConstraint_IsValid)
+	, IsValid( "Has", getPxConstraint_IsValid)
 	, BreakForce( "BreakForce", "linear", "angular", setPxConstraint_BreakForce, getPxConstraint_BreakForce)
 	, MinResponseThreshold( "MinResponseThreshold", setPxConstraint_MinResponseThreshold, getPxConstraint_MinResponseThreshold)
 	, ConcreteTypeName( "ConcreteTypeName", getPxConstraint_ConcreteTypeName)
@@ -738,7 +738,7 @@ inline void setPxTolerancesScaleLength( PxTolerancesScale* inOwner, PxReal inDat
 inline PxReal getPxTolerancesScaleSpeed( const PxTolerancesScale* inOwner ) { return inOwner->speed; }
 inline void setPxTolerancesScaleSpeed( PxTolerancesScale* inOwner, PxReal inData) { inOwner->speed = inData; }
 PX_PHYSX_CORE_API PxTolerancesScaleGeneratedInfo::PxTolerancesScaleGeneratedInfo()
-	: IsValid( "IsValid", getPxTolerancesScale_IsValid)
+	: IsValid( "Has", getPxTolerancesScale_IsValid)
 	, Length( "Length", setPxTolerancesScaleLength, getPxTolerancesScaleLength )
 	, Speed( "Speed", setPxTolerancesScaleSpeed, getPxTolerancesScaleSpeed )
 {}
@@ -1171,7 +1171,7 @@ inline void setPxSceneQueryDescDynamicNbObjectsPerNode( PxSceneQueryDesc* inOwne
 inline PxSceneQueryUpdateMode::Enum getPxSceneQueryDescSceneQueryUpdateMode( const PxSceneQueryDesc* inOwner ) { return inOwner->sceneQueryUpdateMode; }
 inline void setPxSceneQueryDescSceneQueryUpdateMode( PxSceneQueryDesc* inOwner, PxSceneQueryUpdateMode::Enum inData) { inOwner->sceneQueryUpdateMode = inData; }
 PX_PHYSX_CORE_API PxSceneQueryDescGeneratedInfo::PxSceneQueryDescGeneratedInfo()
-	: IsValid( "IsValid", getPxSceneQueryDesc_IsValid)
+	: IsValid( "Has", getPxSceneQueryDesc_IsValid)
 	, StaticStructure( "StaticStructure", setPxSceneQueryDescStaticStructure, getPxSceneQueryDescStaticStructure )
 	, DynamicStructure( "DynamicStructure", setPxSceneQueryDescDynamicStructure, getPxSceneQueryDescDynamicStructure )
 	, DynamicTreeRebuildRateHint( "DynamicTreeRebuildRateHint", setPxSceneQueryDescDynamicTreeRebuildRateHint, getPxSceneQueryDescDynamicTreeRebuildRateHint )
@@ -1371,7 +1371,7 @@ inline void setPxBroadPhaseDescMDiscardStaticVsKinematic( PxBroadPhaseDesc* inOw
 inline _Bool getPxBroadPhaseDescMDiscardKinematicVsKinematic( const PxBroadPhaseDesc* inOwner ) { return inOwner->mDiscardKinematicVsKinematic; }
 inline void setPxBroadPhaseDescMDiscardKinematicVsKinematic( PxBroadPhaseDesc* inOwner, _Bool inData) { inOwner->mDiscardKinematicVsKinematic = inData; }
 PX_PHYSX_CORE_API PxBroadPhaseDescGeneratedInfo::PxBroadPhaseDescGeneratedInfo()
-	: IsValid( "IsValid", getPxBroadPhaseDesc_IsValid)
+	: IsValid( "Has", getPxBroadPhaseDesc_IsValid)
 	, MType( "MType", setPxBroadPhaseDescMType, getPxBroadPhaseDescMType )
 	, MContextID( "MContextID", setPxBroadPhaseDescMContextID, getPxBroadPhaseDescMContextID )
 	, MContextManager( "MContextManager", setPxBroadPhaseDescMContextManager, getPxBroadPhaseDescMContextManager )
@@ -1454,7 +1454,7 @@ inline void setPxgDynamicsMemoryConfigCollisionStackSize( PxgDynamicsMemoryConfi
 inline PxU32 getPxgDynamicsMemoryConfigMaxHairContacts( const PxgDynamicsMemoryConfig* inOwner ) { return inOwner->maxHairContacts; }
 inline void setPxgDynamicsMemoryConfigMaxHairContacts( PxgDynamicsMemoryConfig* inOwner, PxU32 inData) { inOwner->maxHairContacts = inData; }
 PX_PHYSX_CORE_API PxgDynamicsMemoryConfigGeneratedInfo::PxgDynamicsMemoryConfigGeneratedInfo()
-	: IsValid( "IsValid", getPxgDynamicsMemoryConfig_IsValid)
+	: IsValid( "Has", getPxgDynamicsMemoryConfig_IsValid)
 	, TempBufferCapacity( "TempBufferCapacity", setPxgDynamicsMemoryConfigTempBufferCapacity, getPxgDynamicsMemoryConfigTempBufferCapacity )
 	, MaxRigidContactCount( "MaxRigidContactCount", setPxgDynamicsMemoryConfigMaxRigidContactCount, getPxgDynamicsMemoryConfigMaxRigidContactCount )
 	, MaxRigidPatchCount( "MaxRigidPatchCount", setPxgDynamicsMemoryConfigMaxRigidPatchCount, getPxgDynamicsMemoryConfigMaxRigidPatchCount )
