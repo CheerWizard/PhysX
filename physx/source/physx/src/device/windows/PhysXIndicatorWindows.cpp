@@ -37,7 +37,7 @@
 #include <VersionHelpers.h>
 #endif
 
-// Scope-based to indicate to NV driver that CPU PhysX is happening
+// cScope-based to indicate to NV driver that CPU PhysX is happening
 physx::PhysXIndicator::PhysXIndicator(bool isGpu) 
 : mPhysXDataPtr(0), mFileHandle(0), mIsGpu(isGpu)
 {

@@ -222,8 +222,8 @@ public:
 
 	\param[in] geom					The geometry object. Can be a capsule, a box or a convex mesh
 	\param[in] pose					Pose of the geometry object
-	\param[in] triangleVertices		Triangle vertices in local space
-	\param[in] triangleIndex		Triangle index
+	\param[in] triangleVertices		sTriangle vertices in local space
+	\param[in] triangleIndex		sTriangle index
 	\param[in] contactDistance		The distance at which contacts begin to be generated between the pairs
 	\param[in] meshContactMargin	The mesh contact margin.
 	\param[in] toleranceLength		The toleranceLength. Used for scaling distance-based thresholds internally to produce appropriate results given simulations in different units

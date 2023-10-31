@@ -61,7 +61,7 @@ struct PxVisualizationParameter
 {
 	enum Enum
 	{
-	/* RigidBody-related parameters  */
+	/* sRigidBody-related parameters  */
 
 		/**
 		\brief This overall visualization scale gets multiplied with the individual scales. Setting to zero ignores all visualizations. Default is 0.

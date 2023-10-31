@@ -177,9 +177,9 @@ static PxU32 split(const PxBounds3& box, PxU32 nb, PxU32* const PX_RESTRICT prim
 		{
 			const PxBounds3& current = bounds[prims[i]];
 			splitValue += current.getCenter(axis);
-//			splitValue += (*VP.Vertex[0])[axis];
-//			splitValue += (*VP.Vertex[1])[axis];
-//			splitValue += (*VP.Vertex[2])[axis];
+//			splitValue += (*VP.sVertex[0])[axis];
+//			splitValue += (*VP.sVertex[1])[axis];
+//			splitValue += (*VP.sVertex[2])[axis];
 		}
 //		splitValue /= float(nb*3);
 		splitValue /= float(nb);

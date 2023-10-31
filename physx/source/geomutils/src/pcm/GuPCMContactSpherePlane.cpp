@@ -54,7 +54,7 @@ bool Gu::pcmContactSpherePlane(GU_CONTACT_METHOD_ARGS)
 	const FloatV contactDist = FLoad(params.mContactDistance);
 
 	const PxTransformV transf1(p1, q1);
-	//Sphere in plane space
+	//sSphere in plane space
 	const Vec3V sphereCenterInPlaneSpace = transf1.transformInv(p0);
 	
 	//Separation

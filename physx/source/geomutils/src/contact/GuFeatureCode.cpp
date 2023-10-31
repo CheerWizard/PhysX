@@ -39,12 +39,12 @@ static FeatureCode computeFeatureCode(PxReal u, PxReal v)
 	{
 		if(v==0.0f)
 		{
-			// Vertex 0
+			// sVertex 0
 			return FC_VERTEX0;
 		}
 		else if(v==1.0f)
 		{
-			// Vertex 2
+			// sVertex 2
 			return FC_VERTEX2;
 		}
 		else
@@ -57,7 +57,7 @@ static FeatureCode computeFeatureCode(PxReal u, PxReal v)
 	{
 		if(v==0.0f)
 		{
-			// Vertex 1
+			// sVertex 1
 			return FC_VERTEX1;
 		}
 	}

@@ -49,7 +49,7 @@ namespace Gu
 	If the ray defined by the sphere's center and the unit direction directly intersects the triangle-related part of the TSS (*) (i.e.
 	the prism from the Minkowski sum of the inflated triangle) then 'directHit' is set to true. Otherwise it is set to false.
 
-	(*) For Triangle Swept Sphere, see http://gamma.cs.unc.edu/SSV/ssv.pdf for the origin of these names.
+	(*) For sTriangle Swept sSphere, see http://gamma.cs.unc.edu/SSV/ssv.pdf for the origin of these names.
 
 	\param triVerts				[in] triangle vertices
 	\param triUnitNormal		[in] triangle's normalized normal
@@ -62,8 +62,8 @@ namespace Gu
 
 	\return	true if an impact has been found (in which case returned result values are valid)
 	*/
-	bool sweepSphereVSTri(	const PxVec3* PX_RESTRICT triVerts, const PxVec3& triUnitNormal,// Triangle data	
-							const PxVec3& sphereCenter, PxReal sphereRadius,				// Sphere data	
+	bool sweepSphereVSTri(	const PxVec3* PX_RESTRICT triVerts, const PxVec3& triUnitNormal,// sTriangle data
+							const PxVec3& sphereCenter, PxReal sphereRadius,				// sSphere data
 							const PxVec3& unitDir,											// Ray data	
 							PxReal& impactDistance, bool& directHit,						// Results
 							bool testInitialOverlap);										// Query modifier
@@ -73,7 +73,7 @@ namespace Gu
 
 	All input parameters (sphere, quad, sweep direction) must be in the same space. Sweep length is assumed to be infinite.
 
-	Quad must be formed by 2 tris like this:
+	sQuad must be formed by 2 tris like this:
 
 	p0___p2
 	|   /|
@@ -91,8 +91,8 @@ namespace Gu
 
 	\return	true if an impact has been found (in which case returned result values are valid)
 	*/
-	bool sweepSphereVSQuad(	const PxVec3* PX_RESTRICT quadVerts, const PxVec3& quadUnitNormal,	// Quad data
-							const PxVec3& sphereCenter, float sphereRadius,						// Sphere data
+	bool sweepSphereVSQuad(	const PxVec3* PX_RESTRICT quadVerts, const PxVec3& quadUnitNormal,	// sQuad data
+							const PxVec3& sphereCenter, float sphereRadius,						// sSphere data
 							const PxVec3& unitDir,												// Ray data
 							float& impactDistance);												// Results
 
@@ -141,8 +141,8 @@ namespace Gu
 	\param testInitialOverlap	[in] true if PxHitFlag::eASSUME_NO_INITIAL_OVERLAP is not used
 	\return	true if an impact has been found
 	*/
-	bool sweepSphereTriangles(	PxU32 nbTris, const PxTriangle* PX_RESTRICT triangles,							// Triangle data
-								const PxVec3& center, const PxReal radius,										// Sphere data
+	bool sweepSphereTriangles(	PxU32 nbTris, const PxTriangle* PX_RESTRICT triangles,							// sTriangle data
+								const PxVec3& center, const PxReal radius,										// sSphere data
 								const PxVec3& unitDir, PxReal distance,											// Ray data
 								const PxU32* PX_RESTRICT cachedIndex,											// Cache data
 								PxGeomSweepHit& hit, PxVec3& triNormalOut,										// Results

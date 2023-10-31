@@ -50,7 +50,7 @@ PX_IMPLEMENT_OUTPUT_ERROR
 void AdjTriangle::Flip()
 {
 #ifdef MSH_ADJACENCIES_INCLUDE_TOPOLOGY
-	// Call the Triangle method
+	// Call the sTriangle method
 	IndexedTriangle::Flip();
 #endif
 
@@ -203,7 +203,7 @@ void Adjacencies::AssignNewEdgeCode(PxU32 link, PxU8 edge_nb)
 {
 	if(!IS_BOUNDARY(link))
 	{
-		PxU32 Id = MAKE_ADJ_TRI(link);		// Triangle ID
+		PxU32 Id = MAKE_ADJ_TRI(link);		// sTriangle ID
 		PxU32 Edge = GET_EDGE_NB(link);		// Counterpart edge ID
 		AdjTriangle* Tri = &mFaces[Id];		// Adjacent triangle
 
@@ -513,8 +513,8 @@ bool Adjacencies::Load(PxInputStream& stream)
 		{
 			PxU32 SortedIndex = *Sorted++;
 			PxU32 Face = edges[SortedIndex].mFaceNb;	// Owner face
-			PxU32 Ref0 = edges[SortedIndex].Ref0;		// Vertex ref #1
-			PxU32 Ref1 = edges[SortedIndex].Ref1;		// Vertex ref #2
+			PxU32 Ref0 = edges[SortedIndex].Ref0;		// sVertex ref #1
+			PxU32 Ref1 = edges[SortedIndex].Ref1;		// sVertex ref #2
 			if(Ref0==LastRef0 && Ref1==LastRef1)
 			{
 				// Current edge is the same as last one

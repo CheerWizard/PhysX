@@ -93,7 +93,7 @@ namespace Ext
 		return v;
 	}
 
-	// Sphere
+	// sSphere
 	PX_INLINE PxReal computeSphereRatio(PxReal radius)					{ return (4.0f/3.0f) * PxPi * radius * radius * radius;		}
 	PxReal computeSphereMass(PxReal radius, PxReal density)				{ return density * computeSphereRatio(radius);				}
 	PxReal computeSphereDensity(PxReal radius, PxReal mass)				{ return mass / computeSphereRatio(radius);					}

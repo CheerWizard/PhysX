@@ -106,7 +106,7 @@ namespace physx
 				}
 				else
 				{
-					//ideally we would move this part to ScShapeCore but we don't yet have a MaterialManager available there.
+					//ideally we would move this part to ScShapeCore but we don't yet have a cMaterialManager available there.
 					const PxU16 index = static_cast<NpMaterial*>(pxMaterial)->mMaterial.mMaterialIndex;
 					context.registerReference(base, PX_SERIAL_REF_KIND_MATERIAL_IDX, size_t(index));
 				}

@@ -274,7 +274,7 @@ struct PxQueryCache
 
 	PxShape*		shape;		//!< Shape to test for intersection first
 	PxRigidActor*	actor;		//!< Actor to which the shape belongs
-	PxU32			faceIndex;	//!< Triangle index to test first - NOT CURRENTLY SUPPORTED
+	PxU32			faceIndex;	//!< sTriangle index to test first - NOT CURRENTLY SUPPORTED
 };
 
 #if !PX_DOXYGEN

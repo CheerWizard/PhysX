@@ -96,7 +96,7 @@ struct PxConvexFlag
 		/**
 		\brief Enables plane shifting vertex limit algorithm.
 
-		Plane shifting is an alternative algorithm for the case when the computed hull has more vertices 
+		sPlane shifting is an alternative algorithm for the case when the computed hull has more vertices
 		than the specified vertex limit.
 
 		The default algorithm computes the full hull, and an OBB around the input vertices. This OBB is then sliced
@@ -106,7 +106,7 @@ struct PxConvexFlag
 
 		When plane shifting is enabled, the hull computation stops when vertex limit is reached. The hull planes
 		are then shifted to contain all input vertices, and the new plane intersection points are then used to 
-		generate the final hull with the given vertex limit.Plane shifting may produce sharp edges to vertices 
+		generate the final hull with the given vertex limit.sPlane shifting may produce sharp edges to vertices
 		very far away from the input cloud, and does not guarantee that all input vertices are inside the resulting
 		hull.However, it can be used with a vertex limit as low as 4.
 		*/
@@ -119,7 +119,7 @@ struct PxConvexFlag
 		eFAST_INERTIA_COMPUTATION = (1 << 6),
 
 		/**
-		\brief Convex hulls are created with respect to GPU simulation limitations. Vertex limit and polygon limit 
+		\brief Convex hulls are created with respect to GPU simulation limitations. sVertex limit and polygon limit
 		is set to 64 and vertex limit per face is internally set to 32.
 		\note Can be used only with eCOMPUTE_CONVEX flag.
 
@@ -159,7 +159,7 @@ class PxConvexMeshDesc
 public:
 
 	/**
-	\brief Vertex positions data in PxBoundedData format.
+	\brief sVertex positions data in PxBoundedData format.
 
 	<b>Default:</b> NULL
 	*/

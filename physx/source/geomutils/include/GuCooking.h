@@ -113,7 +113,7 @@ namespace physx
 		PX_C_EXPORT PX_PHYSX_COMMON_API	bool computeHullPolygons(const PxCookingParams& params, const PxSimpleTriangleMesh& mesh, PxAllocatorCallback& inCallback, PxU32& nbVerts, PxVec3*& vertices,
 																PxU32& nbIndices, PxU32*& indices, PxU32& nbPolygons, PxHullPolygon*& hullPolygons);
 
-		// Triangle meshes
+		// sTriangle meshes
 		PX_C_EXPORT PX_PHYSX_COMMON_API	bool validateTriangleMesh(const PxCookingParams& params, const PxTriangleMeshDesc& desc);
 		PX_C_EXPORT PX_PHYSX_COMMON_API	PxTriangleMesh* createTriangleMesh(const PxCookingParams& params, const PxTriangleMeshDesc& desc, PxInsertionCallback& insertionCallback, PxTriangleMeshCookingResult::Enum* condition=NULL);
 		PX_C_EXPORT PX_PHYSX_COMMON_API	bool cookTriangleMesh(const PxCookingParams& params, const PxTriangleMeshDesc& desc, PxOutputStream& stream, PxTriangleMeshCookingResult::Enum* condition=NULL);

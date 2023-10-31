@@ -112,12 +112,12 @@ private:
 	PxVec3							mSuspDownwardTravelDirections[4];
 
 	/**
-	\brief Application point of suspension force specified as an offset from the rigid body centre of mass.
+	\brief cApp point of suspension force specified as an offset from the rigid body centre of mass.
 	*/
 	PxVec3							mSuspForceAppPointOffsets[4];	//Offset from cm
 
 	/**
-	\brief Application point of tire forces specified as an offset from the rigid body centre of mass.
+	\brief cApp point of tire forces specified as an offset from the rigid body centre of mass.
 	*/
 	PxVec3							mTireForceAppPointOffsets[4];	//Offset from cm
 
@@ -273,7 +273,7 @@ public:
 	struct SuspLineSweep
 	{
 		/**
-		\brief Geometry suspension line sweep used in most recent scene query.
+		\brief sGeometry suspension line sweep used in most recent scene query.
 		@see PxVehicleSuspensionSweeps
 		*/
 		PxGeometryHolder mGometries[4];

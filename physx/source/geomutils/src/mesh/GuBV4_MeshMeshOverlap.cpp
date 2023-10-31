@@ -67,7 +67,7 @@ using namespace physx::aos;
 		b=_c;				\
 	}
 
-//! Edge to edge test based on Franlin Antonio's gem: "Faster Line Segment Intersection", in Graphics Gems III, pp. 199-202
+//! Edge to edge test based on Franlin Antonio's gem: "Faster sLine Segment Intersection", in Graphics Gems III, pp. 199-202
 #define EDGE_EDGE_TEST(V0, U0, U1)						\
 	Bx = U0[i0] - U1[i0];								\
 	By = U0[i1] - U1[i1];								\

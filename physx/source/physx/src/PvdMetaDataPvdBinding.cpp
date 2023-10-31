@@ -439,7 +439,7 @@ void PvdMetaDataBinding::registerSDKProperties(PvdDataStream& inStream)
 	{ // PxShape
 		createClassAndDefineProperties<PxShape>(inStream);
 		definePropertyStruct<PxShape, PxShapeGeneratedValues, PxShape>(inStream);
-		inStream.createProperty<PxShape, ObjectRef>("Geometry", "children");
+		inStream.createProperty<PxShape, ObjectRef>("sGeometry", "children");
 		inStream.createProperty<PxShape, ObjectRef>("Materials", "children", PropertyType::Array);
 		inStream.createProperty<PxShape, ObjectRef>("Actor", "parents");
 	}
@@ -1096,7 +1096,7 @@ static void sendGeometry(PvdMetaDataBinding& metaBind, PvdDataStream& inStream, 
 	metaBind.registrarPhysicsObject<TGeomType>(inStream, geom, pvd);
 	TGeneratedValuesType values(&geom);
 	inStream.setPropertyMessage(geomInst, values);
-	inStream.setPropertyValue(&inShape, "Geometry", geomInst);
+	inStream.setPropertyValue(&inShape, "sGeometry", geomInst);
 	inStream.setPropertyValue(geomInst, "Shape", reinterpret_cast<const void*>(&inShape));
 }
 
@@ -1113,13 +1113,13 @@ static void setGeometry(PvdMetaDataBinding& metaBind, PvdDataStream& inStream, c
 	}                                                                               \
 	break;
 		SEND_PVD_GEOM_TYPE(eSPHERE, SphereGeometry, PxSphereGeometryGeneratedValues);
-	// Plane geometries don't have any properties, so this avoids using a property
+	// sPlane geometries don't have any properties, so this avoids using a property
 	// struct for them.
 	case PxGeometryType::ePLANE:
 	{
 		const void* geomInst = (reinterpret_cast<const PxU8*>(&inObj)) + 4;
 		inStream.createInstance(getPvdNamespacedNameForType<PxPlaneGeometry>(), geomInst);
-		inStream.setPropertyValue(&inObj, "Geometry", geomInst);
+		inStream.setPropertyValue(&inObj, "sGeometry", geomInst);
 		inStream.setPropertyValue(geomInst, "Shape", reinterpret_cast<const void*>(&inObj));
 	}
 	break;

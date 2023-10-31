@@ -38,7 +38,7 @@ namespace physx
 namespace Gu
 {
 	// PT: I'm taking back control of these files and re-introducing the "ICE" naming conventions:
-	// - "Triangle" is for actual triangles (like the PxTriangle class)
+	// - "sTriangle" is for actual triangles (like the PxTriangle class)
 	// - If it contains vertex indices, it's "IndexedTriangle".
 	// - "v" is too ambiguous (it could be either an actual vertex or a vertex reference) so use "ref" instead.
 	//   Plus we sometimes reference edges, not vertices, so "v" is too restrictive.

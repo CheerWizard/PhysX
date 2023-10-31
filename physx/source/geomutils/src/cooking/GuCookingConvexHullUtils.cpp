@@ -431,9 +431,9 @@ ConvexHull* physx::convexHullCrop(const ConvexHull& convex, const PxPlane& slice
 	PxU32 convexClipFlags = 0;
 
 	// Classify each vertex against the slicing plane as OVER | COPLANAR | UNDER.
-	// OVER     - Vertex is over (outside) the slicing plane. Will not be output.
-	// COPLANAR - Vertex is on the slicing plane. A copy will be output.
-	// UNDER    - Vertex is under (inside) the slicing plane. Will be output.
+	// OVER     - sVertex is over (outside) the slicing plane. Will not be output.
+	// COPLANAR - sVertex is on the slicing plane. A copy will be output.
+	// UNDER    - sVertex is under (inside) the slicing plane. Will be output.
 	// We keep an array of information structures for each vertex in the input convex.
 	// vertflag[i].undermap  - The (computed) index of convex->vertices[i] in the output.
 	//                         invalidIndex for OVER vertices - they are not output.

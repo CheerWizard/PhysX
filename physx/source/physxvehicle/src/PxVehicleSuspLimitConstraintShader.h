@@ -285,7 +285,7 @@ public:
 	const void** mShaderData;
 
 	/**
-	\brief Shader function.
+	\brief sShader function.
 	Default value is PxVehicleComputeTireForceDefault and is set in  PxVehicleDriveTank::setup or PxVehicleDrive4W::setup
 	@see PxVehicleComputeTireForce, PxVehicleComputeTireForceDefault, PxVehicleWheelsSimData, PxVehicleDriveTank::setup, PxVehicleDrive4W::setup
 	*/

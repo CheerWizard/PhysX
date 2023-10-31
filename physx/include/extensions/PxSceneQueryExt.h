@@ -157,7 +157,7 @@ public:
 	\note If a shape from the scene is already overlapping with the query shape in its starting position, behavior is controlled by the PxSceneQueryFlag::eINITIAL_OVERLAP flag.
 
 	\param[in] scene		The scene
-	\param[in] geometry		Geometry of object to sweep (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry		sGeometry of object to sweep (supported types are: box, sphere, capsule, convex).
 	\param[in] pose			Pose of the sweep object.
 	\param[in] unitDir		Normalized direction of the sweep.
 	\param[in] distance		Sweep distance. Needs to be larger than 0. Will be clamped to PX_MAX_SWEEP_DISTANCE.
@@ -190,7 +190,7 @@ public:
 	\note If a shape from the scene is already overlapping with the query shape in its starting position, behavior is controlled by the PxSceneQueryFlag::eINITIAL_OVERLAP flag.
 
 	\param[in] scene		The scene
-	\param[in] geometry		Geometry of object to sweep (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry		sGeometry of object to sweep (supported types are: box, sphere, capsule, convex).
 	\param[in] pose			Pose of the sweep object.
 	\param[in] unitDir		Normalized direction of the sweep.
 	\param[in] distance		Sweep distance. Needs to be larger than 0. Will be clamped to PX_MAX_SWEEP_DISTANCE.
@@ -225,7 +225,7 @@ public:
 	\note If a shape from the scene is already overlapping with the query shape in its starting position, behavior is controlled by the PxSceneQueryFlag::eINITIAL_OVERLAP flag.
 
 	\param[in] scene			The scene
-	\param[in] geometry			Geometry of object to sweep (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry			sGeometry of object to sweep (supported types are: box, sphere, capsule, convex).
 	\param[in] pose				Pose of the sweep object.
 	\param[in] unitDir			Normalized direction of the sweep.
 	\param[in] distance			Sweep distance. Needs to be larger than 0. Will be clamped to PX_MAX_SWEEP_DISTANCE.
@@ -259,7 +259,7 @@ public:
 	\note PxHitFlag::eMESH_MULTIPLE and PxHitFlag::eMESH_BOTH_SIDES have no effect in this case
 
 	\param[in] scene			The scene
-	\param[in] geometry			Geometry of object to check for overlap (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry			sGeometry of object to check for overlap (supported types are: box, sphere, capsule, convex).
 	\param[in] pose				Pose of the object.
 	\param[out] hitBuffer		Buffer to store the overlapping objects to. If the buffer overflows, an arbitrary subset of overlapping objects is stored (typically the query should be restarted with a larger buffer).
 	\param[in] hitBufferSize	Size of the hit buffer. 
@@ -283,7 +283,7 @@ public:
 	\note PxHitFlag::eMESH_MULTIPLE and PxHitFlag::eMESH_BOTH_SIDES have no effect in this case
 	
 	\param[in] scene			The scene
-	\param[in] geometry			Geometry of object to check for overlap (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry			sGeometry of object to check for overlap (supported types are: box, sphere, capsule, convex).
 	\param[in] pose				Pose of the object.
 	\param[out] hit				Pointer to store the overlapping object to.
 	\param[in] filterData		Filtering data and simple logic.
@@ -378,7 +378,7 @@ public:
 	\note	If a shape from the scene is already overlapping with the query shape in its starting position,
 	the hit is returned unless eASSUME_NO_INITIAL_OVERLAP was specified.
 
-	\param[in] geometry		Geometry of object to sweep (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry		sGeometry of object to sweep (supported types are: box, sphere, capsule, convex).
 	\param[in] pose			Pose of the sweep object.
 	\param[in] unitDir		Normalized direction of the sweep.
 	\param[in] distance		Sweep distance. Needs to be larger than 0. Will be clamped to PX_MAX_SWEEP_DISTANCE.
@@ -414,7 +414,7 @@ public:
 
 	\note Filtering: returning eBLOCK from user filter for overlap queries will cause a warning (see #PxQueryHitType).
 
-	\param[in] geometry		Geometry of object to check for overlap (supported types are: box, sphere, capsule, convex).
+	\param[in] geometry		sGeometry of object to check for overlap (supported types are: box, sphere, capsule, convex).
 	\param[in] pose			Pose of the object.
 	\param[in] maxNbTouches	Maximum number of hits to record in the touch buffer for this query. Default=0 reports a single blocking hit. If maxTouchHits is set to 0 all hits are treated as blocking by default.
 	\param[in] filterData	Filtering data and simple logic. See #PxQueryFilterData #PxQueryFilterCallback

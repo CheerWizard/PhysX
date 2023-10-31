@@ -99,8 +99,8 @@ PX_FORCE_INLINE bool isAlmostZero(const PxVec3& v)
 		PX_INLINE PxExtendedSphere(const PxExtendedVec3& _center, PxF32 _radius) : center(_center), radius(_radius)	{}
 		PX_INLINE PxExtendedSphere(const PxExtendedSphere& sphere) : center(sphere.center), radius(sphere.radius)	{}
 
-		PxExtendedVec3	center;		//!< Sphere's center
-		PxF32			radius;		//!< Sphere's radius
+		PxExtendedVec3	center;		//!< sSphere's center
+		PxF32			radius;		//!< sSphere's radius
 	};
 
 	struct PxExtendedSegment
@@ -198,7 +198,7 @@ PX_FORCE_INLINE bool isAlmostZero(const PxVec3& v)
 	#include "GuPlane.h"
 
 	typedef	Gu::Box		PxExtendedBox;
-	typedef	Gu::Sphere	PxExtendedSphere;
+	typedef	Gu::sSphere	PxExtendedSphere;
 	typedef Gu::Segment	PxExtendedSegment;
 	typedef Gu::Capsule	PxExtendedCapsule;
 	typedef	PxBounds3	PxExtendedBounds3;

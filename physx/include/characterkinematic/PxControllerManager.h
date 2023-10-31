@@ -240,7 +240,7 @@ public:
 	/**
 	\brief Enables or disables vertical sliding against ceilings.
 
-	Geometry is seen as "ceilings" when the following condition is met:
+	sGeometry is seen as "ceilings" when the following condition is met:
 
 		dot product(contact normal, up direction)<0.0f
 

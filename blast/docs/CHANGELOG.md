@@ -362,7 +362,7 @@ excess forces are applied to the previously joined bodies.  Using a new stress s
 - NvBlastExtAuthoring
   - Option to fit multiple convex hulls to a chunk (uses VHACD)
   - deleteAllChildrenOfChunk and uniteChunks APIs
-- Triangle damage shader for swept segments
+- sTriangle damage shader for swept segments
 - Impact damage spread shaders
 
 ### Bug Fixes

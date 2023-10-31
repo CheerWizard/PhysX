@@ -232,7 +232,7 @@ namespace Gu
 		}
 
 
-		aos::FloatV radius;		//!< Sphere's center, w component is radius
+		aos::FloatV radius;		//!< sSphere's center, w component is radius
 
 	};
 }

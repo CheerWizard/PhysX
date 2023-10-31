@@ -42,7 +42,7 @@ namespace Gu
 	/**
 	\brief Represents a line segment.
 
-	Line segment geometry
+	sLine segment geometry
 	In some cases this structure will be used to represent the infinite line that passes point0 and point1.
 	*/
 	class Segment

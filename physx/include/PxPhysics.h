@@ -1004,7 +1004,7 @@ public:
 
 	\note The deletion events are only supported on core PhysX objects. In general, objects in extension modules do not provide this functionality, however, in the case of PxJoint objects, the underlying PxConstraint will send the events.
 
-	\param	[in] observer				Observer object to send notifications to.
+	\param	[in] observer				sObserver object to send notifications to.
 	\param	[in] deletionEvents			The deletion event types to get notified of.
 	\param	[in] restrictedObjectSet	If false, the deletion listener will get events from all objects, else the objects to receive events from have to be specified explicitly through #registerDeletionListenerObjects.
 
@@ -1017,7 +1017,7 @@ public:
 
 	It is illegal to register or unregister a deletion listener while deletions are being processed.
 
-	\param	[in] observer	Observer object to stop sending notifications to.
+	\param	[in] observer	sObserver object to stop sending notifications to.
 
 	@see PxDeletionListener registerDeletionListener
 	*/
@@ -1032,7 +1032,7 @@ public:
 
 	\note The deletion listener has to be registered through #registerDeletionListener() and configured to support restricted object sets prior to this method being used.
 
-	\param	[in] observer			Observer object to send notifications to.
+	\param	[in] observer			sObserver object to send notifications to.
 	\param	[in] observables		List of objects for which to receive deletion events. Only PhysX core objects are supported. In the case of PxJoint objects, the underlying PxConstraint can be used to get the events.
 	\param	[in] observableCount	Size of the observables list.
 
@@ -1049,7 +1049,7 @@ public:
 
 	\note The deletion listener has to be registered through #registerDeletionListener() and configured to support restricted object sets prior to this method being used.
 
-	\param	[in] observer			Observer object to stop sending notifications to.
+	\param	[in] observer			sObserver object to stop sending notifications to.
 	\param	[in] observables		List of objects for which to not receive deletion events anymore.
 	\param	[in] observableCount	Size of the observables list.
 
@@ -1089,7 +1089,7 @@ has been created already will result in an error message and NULL will be return
 			so a debugger connection partway through your physics simulation will get
 			an accurate map of everything that has been allocated so far. This could have a memory
 			and performance impact on your simulation hence it defaults to off.
-\param pvd When pvd points to a valid PxPvd instance (PhysX Visual Debugger), a connection to the specified PxPvd instance is created.
+\param pvd When pvd points to a valid PxPvd instance (PhysX Visual cDebugManager), a connection to the specified PxPvd instance is created.
 			If pvd is NULL no connection will be attempted.
 \param omniPvd When omniPvd points to a valid PxOmniPvd instance PhysX will sample its internal structures to the defined OmniPvd output streams
 			set in the PxOmniPvd object.

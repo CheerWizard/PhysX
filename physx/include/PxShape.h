@@ -90,7 +90,7 @@ struct PxShapeFlag
 		/**
 		\brief The shape is a trigger which can send reports whenever other shapes enter/leave its volume.
 
-		\note Triangle meshes and heightfields can not be triggers. Shape creation will fail in these cases.
+		\note sTriangle meshes and heightfields can not be triggers. Shape creation will fail in these cases.
 
 		\note Shapes marked as triggers do not collide with other objects. If an object should act both
 		as a trigger shape and a collision shape then create a rigid body with two shapes, one being a 

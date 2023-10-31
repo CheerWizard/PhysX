@@ -74,10 +74,10 @@ public:
 
 	This function can be used together with #findOverlapTriangleMesh() to retrieve triangle properties.
 
-	\param[in] triGeom				Geometry of the triangle mesh to extract the triangle from.
+	\param[in] triGeom				sGeometry of the triangle mesh to extract the triangle from.
 	\param[in] transform			Transform for the triangle mesh
 	\param[in] triangleIndex		The index of the triangle to retrieve.
-	\param[out] triangle			Triangle points in world space.
+	\param[out] triangle			sTriangle points in world space.
 	\param[out] vertexIndices		Returned vertex indices for given triangle
 	\param[out] adjacencyIndices	Returned 3 triangle adjacency internal face indices (0xFFFFFFFF if no adjacency). The mesh must be cooked with cooking param buildTriangleAdjacencies enabled.
 
@@ -93,10 +93,10 @@ public:
 
 	This function can be used together with #findOverlapHeightField() to retrieve triangle properties.
 
-	\param[in] hfGeom				Geometry of the height field to extract the triangle from.
+	\param[in] hfGeom				sGeometry of the height field to extract the triangle from.
 	\param[in] transform			Transform for the height field.
 	\param[in] triangleIndex		The index of the triangle to retrieve.
-	\param[out] triangle			Triangle points in world space.
+	\param[out] triangle			sTriangle points in world space.
 	\param[out] vertexIndices		Returned vertex indices for given triangle
 	\param[out] adjacencyIndices	Returned 3 triangle adjacency triangle indices (0xFFFFFFFF if no adjacency).
 

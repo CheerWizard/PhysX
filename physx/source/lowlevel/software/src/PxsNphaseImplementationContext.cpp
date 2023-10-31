@@ -99,7 +99,7 @@ public:
 
 void PxsCMUpdateTask::release()
 {
-	// We used to do Task::release(); here before fixing DE1106 (xbox pure virtual crash)
+	// We used to do sTask::release(); here before fixing DE1106 (xbox pure virtual crash)
 	// Release in turn causes the dependent tasks to start running
 	// The problem was that between the time release was called and by the time we got to the destructor
 	// The task chain would get all the way to scene finalization code which would reset the allocation pool

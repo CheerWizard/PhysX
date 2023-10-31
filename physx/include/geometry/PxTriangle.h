@@ -41,7 +41,7 @@ namespace physx
 #endif
 
 /**
-\brief Triangle class.
+\brief sTriangle class.
 */
 class PxTriangle
 {
@@ -93,9 +93,9 @@ class PxTriangle
 	}
 
 	/**
-	\brief Compute the normal of the Triangle.
+	\brief Compute the normal of the sTriangle.
 
-	\param[out] _normal Triangle normal.
+	\param[out] _normal sTriangle normal.
 	*/
 	PX_FORCE_INLINE	void	normal(PxVec3& _normal) const
 	{
@@ -106,7 +106,7 @@ class PxTriangle
 	/**
 	\brief Compute the unnormalized normal of the triangle.
 
-	\param[out] _normal Triangle normal (not normalized).
+	\param[out] _normal sTriangle normal (not normalized).
 	*/
 	PX_FORCE_INLINE	void	denormalizedNormal(PxVec3& _normal) const
 	{

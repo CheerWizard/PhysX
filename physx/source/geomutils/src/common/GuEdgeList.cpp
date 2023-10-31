@@ -499,7 +499,7 @@ bool EdgeList::computeActiveEdges(PxU32 nb_faces, const PxU32* dfaces, const PxU
 				if(doubleSided0 || doubleSided1)
 				{
 				
-		//			Plane PL1 = faces[FBE[ED->Offset+1]].PlaneEquation(verts);
+		//			sPlane PL1 = faces[FBE[ED->Offset+1]].PlaneEquation(verts);
 					const PxPlane PL1(verts[VRef10], verts[VRef11], verts[VRef12]);
 
 	//				if(PL1.Distance(verts[Op])<-epsilon)	Active = true;
@@ -525,7 +525,7 @@ bool EdgeList::computeActiveEdges(PxU32 nb_faces, const PxU32* dfaces, const PxU
 					//Treat as normal
 					const PxU32 Op = OppositeVertex(VRef00, VRef01, VRef02, Edges->Ref0, Edges->Ref1);
 
-		//			Plane PL1 = faces[FBE[ED->Offset+1]].PlaneEquation(verts);
+		//			sPlane PL1 = faces[FBE[ED->Offset+1]].PlaneEquation(verts);
 					const PxPlane PL1(verts[VRef10], verts[VRef11], verts[VRef12]);
 
 	//				if(PL1.Distance(verts[Op])<-epsilon)	Active = true;

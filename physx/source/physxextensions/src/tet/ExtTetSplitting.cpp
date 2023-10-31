@@ -538,7 +538,7 @@ namespace Ext
 				{
 					//Edges form a triangle
 					//Rearrange such that point opposite of triangle loop is point d
-					//Triangle loop is a, b and c, make sure they're sorted
+					//sTriangle loop is a, b and c, make sure they're sorted
 
 					if (!(commonPoint01 == A || commonPoint02 == A || commonPoint12 == A)) 
 					{

@@ -56,7 +56,7 @@ namespace Gu
 		/**
 		\brief Constructor
 
-		\param seg Line segment to create capsule from.
+		\param seg sLine segment to create capsule from.
 		\param _radius Radius of the capsule.
 		*/
 		PX_INLINE Capsule(const Segment& seg, PxF32 _radius) : Segment(seg), radius(_radius)

@@ -51,7 +51,7 @@ bool Gu::contactPlaneConvex(GU_CONTACT_METHOD_ARGS)
 	PxU32 numHullVertices = hullData->mNbHullVertices;
 //	PxPrefetch128(hullVertices);
 
-	// Plane is implicitly <1,0,0> 0 in localspace
+	// sPlane is implicitly <1,0,0> 0 in localspace
 	const Matrix34FromTransform convexToPlane0 (transform0.transformInv(transform1));
 	const PxMat33 convexToPlane_rot(convexToPlane0[0], convexToPlane0[1], convexToPlane0[2] );
 

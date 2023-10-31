@@ -54,7 +54,7 @@ namespace physx
 #endif
 
 /**
-\brief Geometry holder class
+\brief sGeometry holder class
 
 This class contains enough space to hold a value of any PxGeometry subtype.
 

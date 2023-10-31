@@ -210,8 +210,8 @@ namespace Cct
 
 	struct TouchedSphere : public TouchedGeom
 	{
-		PxVec3			mCenter;		//!< Sphere's center
-		PxF32			mRadius;		//!< Sphere's radius
+		PxVec3			mCenter;		//!< sSphere's center
+		PxF32			mRadius;		//!< sSphere's radius
 	};
 
 	struct TouchedCustom : public TouchedGeom
@@ -233,7 +233,7 @@ namespace Cct
 		PxVec3				mWorldNormal;	// Contact normal in world space
 		PxF32				mDistance;		// Contact distance
 		PxU32				mInternalIndex;	// Reserved for internal usage
-		PxU32				mTriangleIndex;	// Triangle index for meshes/heightfields
+		PxU32				mTriangleIndex;	// sTriangle index for meshes/heightfields
 		TouchedGeom*		mGeom;
 
 		PX_FORCE_INLINE		void	setWorldPos(const PxVec3& localImpact, const PxExtendedVec3& offset)

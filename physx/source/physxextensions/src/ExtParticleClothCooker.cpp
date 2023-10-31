@@ -181,7 +181,7 @@ PxU32 GetOppositeVertex(PxU32* inTriangleIndices, PxU32 triangleIndex, PxU32 a, 
 		if(inTriangleIndices[triangleIndex+i] != a && inTriangleIndices[triangleIndex + i] !=b)
 			return inTriangleIndices[triangleIndex + i];
 	}
-	PX_ASSERT_WITH_MESSAGE(0, "Degenerate Triangle found in PxCreateInflatableFromMesh");
+	PX_ASSERT_WITH_MESSAGE(0, "Degenerate sTriangle found in PxCreateInflatableFromMesh");
 	return 0;
 }
 

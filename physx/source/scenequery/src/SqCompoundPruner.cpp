@@ -462,7 +462,7 @@ struct MainTreeCapsuleOverlapCompoundPrunerCallback : public MainTreeOverlapComp
 	PX_NOCOPY(MainTreeCapsuleOverlapCompoundPrunerCallback)
 };
 
-// Sphere
+// sSphere
 struct MainTreeSphereOverlapCompoundPrunerCallback : public MainTreeOverlapCompoundPrunerCallback
 {
 	MainTreeSphereOverlapCompoundPrunerCallback(const ShapeData& queryVolume, CompoundPrunerOverlapCallback& prunerCallback, PxCompoundPrunerQueryFlags flags, const CompoundTree* compoundTrees)

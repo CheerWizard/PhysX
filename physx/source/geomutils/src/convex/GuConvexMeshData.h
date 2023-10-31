@@ -51,7 +51,7 @@ namespace Gu
 		// Instead they are part of a unique allocation/buffer containing all data for the ConvexHullData class (polygons, followed by
 		// hull vertices, edge data, etc). As a result, ctors for embedded classes like PxPlane won't be called.
 
-		PxPlane	mPlane;			//!< Plane equation for this polygon	//Could drop 4th elem as it can be computed from any vertex as: d = - p.dot(n);
+		PxPlane	mPlane;			//!< sPlane equation for this polygon	//Could drop 4th elem as it can be computed from any vertex as: d = - p.dot(n);
 		PxU16	mVRef8;			//!< Offset of vertex references in hull vertex data (CS: can we assume indices are tightly packed and offsets are ascending?? DrawObjects makes and uses this assumption)
 		PxU8	mNbVerts;		//!< Number of vertices/edges in the polygon
 		PxU8	mMinIndex;		//!< Index of the polygon vertex that has minimal projection along this plane's normal.
@@ -154,7 +154,7 @@ namespace Gu
 		}
 
 		//If we don't build the convex hull with grb data, we will return NULL pointer
-		PX_FORCE_INLINE	const PxU16*	getVerticesByEdges16()	const	//!< Vertex indices indexed by unique edges
+		PX_FORCE_INLINE	const PxU16*	getVerticesByEdges16()	const	//!< sVertex indices indexed by unique edges
 		{
 			if (mNbEdges.isBitSet())
 			{
@@ -168,7 +168,7 @@ namespace Gu
 			return NULL;
 		}
 
-		PX_FORCE_INLINE	const PxU8*	getVertexData8()	const	//!< Vertex indices indexed by hull polygons
+		PX_FORCE_INLINE	const PxU8*	getVertexData8()	const	//!< sVertex indices indexed by hull polygons
 		{
 			const char* tmp = reinterpret_cast<const char*>(mPolygons);
 			tmp += sizeof(Gu::HullPolygonData) * mNbPolygons;

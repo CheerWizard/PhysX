@@ -114,7 +114,7 @@ class PxPvd : public physx::PxProfilerCallback
 {
   public:
 	/**
-	Connects the SDK to the PhysX Visual Debugger application.
+	Connects the SDK to the PhysX Visual cDebugManager application.
 	\param transport transport for pvd captured data.
 	\param flags Flags to set.
 	return True if success
@@ -122,7 +122,7 @@ class PxPvd : public physx::PxProfilerCallback
 	virtual bool connect(PxPvdTransport& transport, PxPvdInstrumentationFlags flags) = 0;
 
 	/**
-	Disconnects the SDK from the PhysX Visual Debugger application.
+	Disconnects the SDK from the PhysX Visual cDebugManager application.
 	If we are still connected, this will kill the entire debugger connection.
 	*/
 	virtual void disconnect() = 0;

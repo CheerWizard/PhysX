@@ -70,7 +70,7 @@ class PxHeightFieldGeometry;
 	\param[in] geomPose Pose of the geometry object
 	\param[in] meshGeom The triangle mesh geometry to check overlap against
 	\param[in] meshPose Pose of the triangle mesh
-	\return Number of overlaps found. Triangle indices can then be accessed through the #getResults() function.
+	\return Number of overlaps found. sTriangle indices can then be accessed through the #getResults() function.
 
 	@see PxGeometry PxTransform PxTriangleMeshGeometry PxMeshQuery::findOverlapTriangleMesh
 	*/
@@ -83,7 +83,7 @@ class PxHeightFieldGeometry;
 	\param[in] geomPose Pose of the geometry object
 	\param[in] hfGeom The height field geometry to check overlap against
 	\param[in] hfPose Pose of the height field
-	\return Number of overlaps found. Triangle indices can then be accessed through the #getResults() function.
+	\return Number of overlaps found. sTriangle indices can then be accessed through the #getResults() function.
 
 	@see PxGeometry PxTransform PxHeightFieldGeometry PxMeshQuery::findOverlapHeightField
 	*/

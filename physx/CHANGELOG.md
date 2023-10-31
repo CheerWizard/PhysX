@@ -28,7 +28,7 @@
 * A race condition was fixed that led to nondeterministic contact reports in some scenarios.
 * Fix FEM cloth attachment filtering bug
 * Fix FEM narrow phase collision crash
-* Sphere-Trianglemesh collision bug is fixed
+* sSphere-Trianglemesh collision bug is fixed
 * A bug that led to aggregated shapes being processed as part of the regular broadphase when changing transforms using the direct-GPU API has been fixed.
 * A bug that led to missed collisions and phantom collisions when changing transforms using the direct-GPU API has been fixed.
 * A bug that led to incorrect and nondeterministic behaviour for convex-trianglemesh, convex-heightfield, sphere-trianglemesh, capsule-trianglemesh, sphere-heightfield and capsule-heightfield collisions on GPU has been fixed.
@@ -223,7 +223,7 @@ detection will fall back to CPU for these meshes.
 * These deprecated immediate-mode types have been removed: PxFeatherstoneArticulationJointData, PxFeatherstoneArticulationLinkData, PxFeatherstoneArticulationData, PxMutableLinkData, PxLinkData.
 * The deprecated PxPhysics::createBVHStructure() and PxPhysics::getNbBVHStructures() functions have been removed.
 * A deprecated PxPhysics::createAggregate() function has been removed.
-* Deprecated passthrough functions in PxShape such as `getGeometryType()` and the specialized `get<geomType>Geometry()` were removed. Calls to these functions should be replaced by the accessing the underlying geometry directly with `getGeometry()`.
+* Deprecated passthrough functions in PxShape such as `getGeometryType()` and the specialized `get<geomType>sGeometry()` were removed. Calls to these functions should be replaced by the accessing the underlying geometry directly with `getGeometry()`.
 * Context creation for CUDA/Graphics interoperability has been deprecated. interopMode has been removed from PxCudaContextManagerDesc.
 * No more Support for Microsoft Visual Studio 2013 and 2015.
 * All 32 bits presets are removed.
@@ -648,7 +648,7 @@ detection will fall back to CPU for these meshes.
 * A new broadphase has been added (PxBroadPhaseType::ePABP).
 * A standalone broadphase interface has been added (see PxCreateBroadPhase and PxCreateAABBManager).
 * A compliant contact model has been added. Users can now customize spring-stiffness and damping for a soft contact response.
-* Triangle mesh colliders are now supported on dynamic rigid bodies if a SDF (Signed Distance Field) gets generated during cooking.
+* sTriangle mesh colliders are now supported on dynamic rigid bodies if a SDF (Signed Distance Field) gets generated during cooking.
 * PxSceneDesc::frictionCorrelationDistance allows to configure the distance for merging contact points into a single anchor point.
 * PxSceneDesc::contactPairSlabSize can be used to define the size of the contact pool slabs.
 
@@ -675,7 +675,7 @@ detection will fall back to CPU for these meshes.
 * The sphere-vs-mesh PCM contact generation had a bug that sometimes made the sphere go through the mesh due to a missed vertex contact. This has been fixed.
 * Performance and stability issues when simulating convexes colliding against many triangles in complex PxTriangleMesh geometries has been improved.
 * Attempting to apply a force to a kinematic rigid body will no longer lead to a crash in profile or release builds.
-* Triangle mesh negative scale support for GPU code path.
+* sTriangle mesh negative scale support for GPU code path.
 * Switching a constrained dynamic body to kinematic no longer triggers an assert in debug mode.
 
 ## Joints
@@ -810,7 +810,7 @@ detection will fall back to CPU for these meshes.
 * BVH34 trees can now be quantized or not depending on PxBVH34MidphaseDesc::quantized.
 * Added remeshing and mesh simplification to preprocess meshes such that they can be used for softbody simulation. New API functions are PxTetMaker::simplifyTriangleMesh()/remeshTriangleMesh()/createTreeBasedTetrahedralMesh()
 * Added low-level cooking functions (GeomUtils), that can be used to cook objects without using the cooking library. See SnippetStandaloneQuerySystem for an example. The cooking library is still here though for backward compatibility.
-* Triangle mesh cooking supports the generation of a SDF (Signed Distance Field) to allow triangle mesh colliders on dynamic actors.
+* sTriangle mesh cooking supports the generation of a SDF (Signed Distance Field) to allow triangle mesh colliders on dynamic actors.
 
 ### Fixed:
 
@@ -1316,7 +1316,7 @@ December 2018
         
 * The PhysX SDK build system is now based on CMake generated build configuration files. For more details, please refer to the PhysX SDK 4.0 Migration Guide.
 * The Linux build has been changed to produce static as opposed to shared libraries. The compiler was switched from GCC to Clang.
-* The PxShared library contains functionality shared beyond the PhysX SDK. It has been streamlined to a minimal set of headers. The PxFoundation singleton has been moved back to the PhysX SDK, as well as the task manager, CUDA context manager and PhysX Visual Debugger (PVD) functionality.
+* The PxShared library contains functionality shared beyond the PhysX SDK. It has been streamlined to a minimal set of headers. The PxFoundation singleton has been moved back to the PhysX SDK, as well as the task manager, CUDA context manager and PhysX Visual cDebugManager (PVD) functionality.
 * PhysXDelayLoadHook and PhysXGpuLoadHook have been simplified, and PxFoundationDelayLoadHook has been removed.
         
     
@@ -2444,7 +2444,7 @@ APEX 1.4 can now be used independently of PhysX. In order to achieve that a new 
             
         
 
-## Physx Visual Debugger
+## Physx Visual cDebugManager
         
 * PhysXVisualDebuggerSDK, PvdRuntime projects replaced with PxPvdSDK.
 * PxPvdSceneClient::drawPoints now takes physx::pvdsdk::PvdDebugPoint as input parameter instead of PxDebugPoint. drawLines, drawTriangles, drawText and so on.
@@ -2862,7 +2862,7 @@ September 2014
             
         
 
-### Geometry
+### sGeometry
         
 #### Fixed:
             
@@ -2987,7 +2987,7 @@ December 2013
         
 #### Added:
             
-*  Added triangle mesh cache statistics for GPU particles.  Triangle mesh cache statistics are also captured by PVD as part of simulation statistics.
+*  Added triangle mesh cache statistics for GPU particles.  sTriangle mesh cache statistics are also captured by PVD as part of simulation statistics.
 *  Added new option to query approximate particle velocities relative to colliding rigid actors.  This can be used for debris rotation on moving objects.  Enable with PxParticleReadDataFlag::eCOLLISION_VELOCITY_BUFFER and read from PxParticleReadData::collisionVelocityBuffer.
             
 #### Fixed:
@@ -3438,7 +3438,7 @@ September 2013
 *  The tangential spring constant parameter in articulations that was previously 'tangentialSpring' is now 'tangentialStiffness'.
 *  Constraints do not respect PxDominanceGroup settings. Use PxJoint::setInvMassScale and setInvInertiaScale
 *  Shapes are reference counted. PxShape::release() now decrements the reference count on a shape, and its use is deprecated for detaching a shape from its actor - use detachShape() instead.
-*  Shape creation methods do not take a local transform parameter anymore. Instead PxShapeFlags can be specified. Triangle meshes, height fields and plane geometry shapes cannot be combined with non-kinematic PxRigidDynmic actors if PxShapeFlag::eSIMULATION_SHAPE is specified. Corresponding calls to PxRigidActor::createShape() or PxRigidActor::attachShape() are not supported.
+*  Shape creation methods do not take a local transform parameter anymore. Instead PxShapeFlags can be specified. sTriangle meshes, height fields and plane geometry shapes cannot be combined with non-kinematic PxRigidDynmic actors if PxShapeFlag::eSIMULATION_SHAPE is specified. Corresponding calls to PxRigidActor::createShape() or PxRigidActor::attachShape() are not supported.
 *  PxShape::getActor() now returns a pointer, which is NULL if the shape is shareable.
 *  PxShape::getWorldBounds() has been replaced with PxShapeExt::getWorldBounds().
 *  PxContactPoint has been renamed PxFeatureContact.
@@ -3529,7 +3529,7 @@ September 2013
                 
             
 
-### Triangle meshes
+### sTriangle meshes
             
 ####  Added:
                 
@@ -3801,7 +3801,7 @@ November 2012
 *  Fixed a non-deterministic crash appearing with rigid bodies using CCD and gpu particles in the same scene.
                 
 
-#### Physx Visual Debugger
+#### Physx Visual cDebugManager
                 
 *  Material release events are now correctly sent to PVD. 
                 
@@ -3927,7 +3927,7 @@ October 2012
 *  Additional convex hull check has been added to detect open volumes.
                 
 
-#### Triangle meshes
+#### sTriangle meshes
                 
 *  Added triangle mesh flags for 16bit indices and adjacency information.
 *  Fixed adjacency information order for getTriangle with triangle meshes to respect the vertex order.
@@ -3977,7 +3977,7 @@ October 2012
                 
 
 
-#### Visual Remote Debugger
+#### Visual Remote cDebugManager
                 
 *  Added PVD compatible profile zones for batched queries.
 *  Added the ability to capture and inspect scene queries in PVD.
@@ -4144,7 +4144,7 @@ June 2012
 *  The vehicle sdk now reports an error to the error stream and exits from PxVehicleUpates if PxInitVehicleSdk has not been called in advance.  This avoids a divide-by-zero error that can arise if the vehicle sdk has not been initialised correctly.
                 
 
-#### Visual Debugger
+#### Visual cDebugManager
                 
 *  Releasing of cloth fabrics is reported to the VRD.
 *  Ext::Joint::setActors() call now reported to PVD.
@@ -4183,7 +4183,7 @@ December 2011
 *  On Windows, the PxFoundation instance is now a process wide singleton and part of the new PhysX3Common.dll library
 *  PxCreatePhysics() does not create a PxFoundation instance any longer. The PxFoundation instance has to be created in advance through PxCreateFoundation().
 *  Calls to PxCreatePhysics() are not valid anymore if a PxPhysics instance already exists.
-*  If profiling information should be sent to the PhysX Visual Debugger, a PxProfileZoneManager instance has to be provided when creating the PxPhysics instance.
+*  If profiling information should be sent to the PhysX Visual cDebugManager, a PxProfileZoneManager instance has to be provided when creating the PxPhysics instance.
 *  The version number constant PX_PUBLIC_FOUNDATION_VERSION has been replaced with PX_PHYSICS_VERSION. Both PxFoundation and PxPhysics use the same version number now.
 *  The API now distinguishes between input and output stream types.
 *  Added mechanism to reduce code size by not linking optional components.  See PxCreateBasePhysics() and the PxRegister*() functions.
@@ -4225,7 +4225,7 @@ December 2011
 *  Improved PxBatchQuery API.
 *  PxPhysics::getProfileZoneManager() now returns a pointer rather than a reference.
 *  PxRigidDynamic::moveKinematic() has been renamed to setKinematicTarget() to underline its precise semantics.
-*  Added new function PxShape::getGeometry and class PxGeometryHolder to improve Geometry APIs.
+*  Added new function PxShape::getGeometry and class PxGeometryHolder to improve sGeometry APIs.
 *  PxCreatePlane now takes a PxPlane equation as a parameter. Note that the interpretation of the distance value is negated relative to 3.1
 *  Added new actor creation helpers PxCloneStatic, PxCloneDynamic, PxScaleActor.
 *  Added new functions PxTransformFromSegment, PxTransformFromPlaneEquation to simplify creation of planes and capsules.
@@ -4313,7 +4313,7 @@ December 2011
 *  Fixed assert in sweep tests.
 *  Concurrent read/write operations during a PxScene::fetchResults() call were not detected properly and no warning message got sent in checked builds. Forbidden write operations during callbacks triggered by PxScene::fetchResults() (contact/trigger reports etc.) were not covered either.
 *  Fixed crash bug that occurred during collision detection when more than 16K of contact data was generated.  Contacts that generate more than 16K of contact data are now fully supported.
-*  Fixed crash bug when PhysX Visual Debugger is connected and an object gets modified and then released while the simulation is running.
+*  Fixed crash bug when PhysX Visual cDebugManager is connected and an object gets modified and then released while the simulation is running.
                 
 
         
@@ -4626,7 +4626,7 @@ September 2011
         
 #### General
                 
-*  Under VC10, you may get warnings due to conflicting build configuration flags.  Workaround: Clear the "Inherit from parent or project defaults" flag for all projects in Project->Properties->C/C++->Command Line.  We plan to fix this for the 3.1 general availability release.
+*  Under VC10, you may get warnings due to conflicting build configuration flags.  Workaround: Clear the "Inherit from parent or project defaults" flag for all projects in Project->Properties->C/C++->Command sLine.  We plan to fix this for the 3.1 general availability release.
                 
 #### Scene Query
                 
@@ -4677,11 +4677,11 @@ Because even the API changes are so significant, it is easier to see it as a who
 *  Articulations: A way to create very stiff joint assemblies.
 *  Serialization: Save objects in a binary format and load them back quickly!
 *  Broad Phase Clustering: Put objects that belong together into a single broadphase volume.
-*  Driverless Model: No need to worry about system software on PC anymore.
+*  Driverless sModel: No need to worry about system software on PC anymore.
 *  Dynamic Character Controller: A character controller that can robustly walk on dynamic objects.
 *  Vehicle Library: A toolkit to make vehicles, including an all new tire model.
 *  Non-Simulation Objects: A staging are outside of the simulation from where you can add things into the simulation at high speed.
-*  Simulation Task Manager: Take control of the management of simulation tasks.
+*  Simulation sTask Manager: Take control of the management of simulation tasks.
 *  Stable Depenetration: Large penetrations can be gracefully recovered from.
 *  Double Buffering: You can read from and write to the simulated objects while the simulation is running on another thread.
 *  Mesh Scaling: Create different nonuniformly scaled instances of your meshes and convexes without duplicating the memory.
@@ -4689,8 +4689,8 @@ Because even the API changes are so significant, it is easier to see it as a who
 *  Fast Continuous Collision Detection: Have small and high speed objects collide correctly without sacrificing performance.
 *  Significantly increased performance and memory footprint, especially on consoles.
 *  Unified solver for deformables and rigid bodies for great interaction.
-*  Triangle collision detection with deformables.
-*  Support for our new Physics Visual Debugger, including integrated profiling.
+*  sTriangle collision detection with deformables.
+*  Support for our new Physics Visual cDebugManager, including integrated profiling.
                 
 
 
@@ -4704,7 +4704,7 @@ Because even the API changes are so significant, it is easier to see it as a who
 #### Rigid Bodies
                 
 *  Capsules are now defined to extend along the x rather than the y axis.
-*  Triangle meshes do not support heightfield functionality anymore. Use the dedicated PxHeightField class instead.
+*  sTriangle meshes do not support heightfield functionality anymore. Use the dedicated PxHeightField class instead.
 *  Dynamic triangle mesh actors are not supported any longer. However, you can decompose your mesh into convex parts and create a dynamic actor consisting of these convex parts.
 *  The deprecated heightfield property NxHeightFieldDesc::verticalExtent is not supported any longer. Please use the PxHeightFieldDesc::thickness parameter instead.
 *  NxSpringAndDamperEffector is not supported anymore. Use PxDistanceJoint instead.
@@ -4742,7 +4742,7 @@ Because even the API changes are so significant, it is easier to see it as a who
 *  Per particle collision rest offset.
 *  GPU accelerated particle systems.
                         
-  * Application controllable mesh mirroring to device memory.
+  * cApp controllable mesh mirroring to device memory.
   * Runtime switching between software and GPU accelerated implementation.
                         
                     

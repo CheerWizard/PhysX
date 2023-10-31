@@ -90,7 +90,7 @@ namespace Gu
 	public:
 		void							release();
 
-		// Triangle meshes
+		// sTriangle meshes
 		void							addTriangleMesh(Gu::TriangleMesh* np, bool lock=true);
 		PxTriangleMesh*					createTriangleMesh(PxInputStream& stream);
 		PxTriangleMesh*					createTriangleMesh(void* triangleMeshData);

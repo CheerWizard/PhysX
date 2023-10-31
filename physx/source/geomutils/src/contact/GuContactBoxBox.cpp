@@ -218,7 +218,7 @@ static PxI32 generateContacts(//PxVec3 ctcPts[], PxReal depths[],
 	// Create vertex info for 8 vertices
 	for(PxU32 i=0; i<8; i++)
 	{
-		// Vertex suivant
+		// sVertex suivant
 		VertexInfo& p = vtx[i];
 		// test the point with respect to the x = 0 plane
 		//		if(p.pos.x < 0)

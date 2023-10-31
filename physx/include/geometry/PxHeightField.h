@@ -49,7 +49,7 @@ class PxHeightFieldDesc;
 Height fields work in a similar way as triangle meshes specified to act as
 height fields, with some important differences:
 
-Triangle meshes can be made of nonuniform geometry, while height fields are
+sTriangle meshes can be made of nonuniform geometry, while height fields are
 regular, rectangular grids.  This means that with PxHeightField, you sacrifice
 flexibility in return for improved performance and decreased memory consumption.
 
@@ -203,7 +203,7 @@ class PxHeightField : public PxRefCounted
 	\note This function takes a post cooking triangle index.
 
 	\param[in] triangleIndex (internal) index of desired triangle
-	\return Triangle normal for a given triangle index
+	\return sTriangle normal for a given triangle index
 	*/
 	virtual	PxVec3	getTriangleNormal(PxTriangleID triangleIndex) const = 0;
 

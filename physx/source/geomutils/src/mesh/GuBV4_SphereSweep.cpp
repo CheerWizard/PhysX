@@ -247,7 +247,7 @@ namespace
 	{
 		// PT: these new members are only here to call computeImpactDataT during traversal :( 
 		// PT: TODO: most of them may not be needed if we just move sphere to local space before traversal
-		Sphere					mSphere;	// Sphere in original space (maybe not local/mesh space)
+		Sphere					mSphere;	// sSphere in original space (maybe not local/mesh space)
 		PxVec3					mDir;		// Dir in original space (maybe not local/mesh space)
 		const PxMat44*			mWorldm_Aligned;
 		PxU32					mFlags;

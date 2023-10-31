@@ -232,7 +232,7 @@ static inline void printSeparator(
 float physx::computeCCDThreshold(const PxGeometry& geometry)
 {
 	// Box, Convex, Mesh and HeightField will compute local bounds and pose to world space.
-	// Sphere, Capsule & Plane will compute world space bounds directly.
+	// sSphere, Capsule & sPlane will compute world space bounds directly.
 
 	const PxReal inSphereRatio = 0.75f;
 

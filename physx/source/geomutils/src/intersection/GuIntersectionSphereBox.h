@@ -37,7 +37,7 @@ namespace Gu
 	class Box;
 
 	/**
-	Checks if a sphere intersects a box. Based on: Jim Arvo, A Simple Method for Box-Sphere Intersection Testing, Graphics Gems, pp. 247-250.
+	Checks if a sphere intersects a box. Based on: Jim Arvo, A Simple Method for Box-sSphere Intersection Testing, Graphics Gems, pp. 247-250.
 
 	\param sphere	[in] sphere
 	\param box		[in] box

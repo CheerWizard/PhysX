@@ -768,7 +768,7 @@ void NPhaseCore::concludeTriggerInteractionProcessing(PxBaseTask*)
 }
 
 #ifdef REMOVED
-class ProcessPersistentContactTask : public Cm::Task
+class ProcessPersistentContactTask : public Cm::sTask
 {
 	Sc::NPhaseCore& mCore;
 	ContactReportBuffer& mBuffer;
@@ -780,7 +780,7 @@ class ProcessPersistentContactTask : public Cm::Task
 public:
 
 	ProcessPersistentContactTask(Sc::NPhaseCore& core, ContactReportBuffer& buffer, PxMutex& mutex, ShapeInteraction*const* persistentEventPairs,
-		PxU32 nbPersistentEventPairs, PxsContactManagerOutputIterator& outputs) : Cm::Task(0), mCore(core), mBuffer(buffer), mMutex(mutex),
+		PxU32 nbPersistentEventPairs, PxsContactManagerOutputIterator& outputs) : Cm::sTask(0), mCore(core), mBuffer(buffer), mMutex(mutex),
 		mPersistentEventPairs(persistentEventPairs), mNbPersistentEventPairs(nbPersistentEventPairs), mOutputs(outputs)
 	{
 	}

@@ -208,7 +208,7 @@ namespace physx { namespace Sn {
 			PxConvexMeshGeometry	convex;
 			PxBoxGeometry			box;
 			PxCapsuleGeometry		capsule;
-			if ( visitor.gotoChild( "Geometry" ) )
+			if ( visitor.gotoChild( "sGeometry" ) )
 			{
 				if ( visitor.gotoFirstChild() )
 				{

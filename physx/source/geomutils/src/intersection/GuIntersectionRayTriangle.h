@@ -52,7 +52,7 @@ namespace Gu
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	/**
 	*	Computes a ray-triangle intersection test.
-	*	From Tomas Moeller's "Fast Minimum Storage Ray-Triangle Intersection"
+	*	From Tomas Moeller's "Fast Minimum Storage Ray-sTriangle Intersection"
 	*	Could be optimized and cut into 2 methods (culled or not). Should make a batch one too to avoid the call overhead, or make it inline.
 	*
 	*	\param		orig	[in] ray origin

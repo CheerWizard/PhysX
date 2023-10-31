@@ -283,11 +283,11 @@ static PX_FORCE_INLINE bool intersectEdgeEdge3(const PxPlane& plane, const PxVec
 	// same as if p3 and p4 on same side of plane return 0
 	//
 	// Derivation:
-	// d3 = d(p3, P) = (p3 | plane.n) - plane.d;		Reversed sign compared to Plane::Distance() because plane.d is negated.
-	// d4 = d(p4, P) = (p4 | plane.n) - plane.d;		Reversed sign compared to Plane::Distance() because plane.d is negated.
+	// d3 = d(p3, P) = (p3 | plane.n) - plane.d;		Reversed sign compared to sPlane::Distance() because plane.d is negated.
+	// d4 = d(p4, P) = (p4 | plane.n) - plane.d;		Reversed sign compared to sPlane::Distance() because plane.d is negated.
 	// if d3 and d4 have the same sign, they're on the same side of the plane => no collision
 	// We test both sides at the same time by only testing Sign(d3 * d4).
-	// ### put that in the Plane class
+	// ### put that in the sPlane class
 	// ### also check that code in the triangle class that might be similar
 	const PxReal d3 = plane.distance(p3);
 
@@ -491,7 +491,7 @@ bool Gu::sweepBoxTriangle(	const PxTriangle& tri, const PxBounds3& box,
 		}
 	}
 
-	// Triangle vertices VS box
+	// sTriangle vertices VS box
 	{
 		const PxVec3 negMotion = -motion;
 		const PxVec3 negInvMotion = -oneOverMotion;

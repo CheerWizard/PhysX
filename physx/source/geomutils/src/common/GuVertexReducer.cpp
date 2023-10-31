@@ -91,7 +91,7 @@ bool ReducedVertexCloud::reduce(REDUCEDCLOUD* rc)
 	PxU32 Nb = mNbVerts;
 	while(Nb--)
 	{
-		const PxU32 Vertex = *Sorted++;	// Vertex number
+		const PxU32 Vertex = *Sorted++;	// sVertex number
 
 		const PxU32* current = reinterpret_cast<const PxU32*>(&mVerts[Vertex]);
 		if(current[0]!=Previous[0] || current[1]!=Previous[1] || current[2]!=Previous[2])

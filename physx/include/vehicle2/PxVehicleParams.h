@@ -635,7 +635,7 @@ struct PxVehicleSimulationContextType
 };
 
 /**
-\brief Structure to support Omni PVD, the PhysX Visual Debugger.
+\brief Structure to support Omni PVD, the PhysX Visual cDebugManager.
 */
 struct PxVehiclePvdContext
 {
@@ -696,7 +696,7 @@ struct PxVehicleSimulationContext
 	PxReal thresholdForwardSpeedForWheelAngleIntegration;
 
 	/**
-	\brief Structure to support Omni PVD, the PhysX Visual Debugger.
+	\brief Structure to support Omni PVD, the PhysX Visual cDebugManager.
 	*/
 	PxVehiclePvdContext pvdContext;
 

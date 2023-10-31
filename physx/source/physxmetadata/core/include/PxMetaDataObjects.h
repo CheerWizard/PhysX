@@ -32,7 +32,7 @@
 #include "foundation/PxPhysicsVersion.h"
 
 // include the base headers instead of the PxPhysicsAPI.h
-//Geometry Library
+//sGeometry Library
 #include "geometry/PxBoxGeometry.h"
 #include "geometry/PxCapsuleGeometry.h"
 #include "geometry/PxConvexMesh.h"
@@ -524,7 +524,7 @@ struct PxShapeGeomProperty : public PxWriteOnlyPropertyInfo< PxPropertyInfoName:
 
 	typedef PxWriteOnlyPropertyInfo< PxPropertyInfoName::PxShape_Geom, PxShape, const PxGeometry & >::TSetterType TSetterType;
 	typedef PxGeometryHolder (*TGetterType)( const PxShape* inObj );
-	PxShapeGeomProperty( const char* inName="Geometry", TSetterType inSetter=setPxShape_Geom, TGetterType=getPxShape_Geom )
+	PxShapeGeomProperty( const char* inName="sGeometry", TSetterType inSetter=setPxShape_Geom, TGetterType=getPxShape_Geom )
 		: PxWriteOnlyPropertyInfo< PxPropertyInfoName::PxShape_Geom, PxShape, const PxGeometry & >( inName, inSetter )
 	{
 	}

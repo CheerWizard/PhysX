@@ -286,7 +286,7 @@ namespace physx { namespace profile {
 			inStream.streamify( "Size", mSize, inHeader.getSizeCompress() );
 			inStream.streamify( "Type", mType, inHeader.getTypeCompress() );
 			inStream.streamify( "File", mFile, inHeader.getFnameCompress() );
-			inStream.streamify( "Line", mLine, inHeader.getLineCompress() );
+			inStream.streamify( "sLine", mLine, inHeader.getLineCompress() );
 			MemoryEventData::streamify( inStream, inHeader );
 		}
 	};

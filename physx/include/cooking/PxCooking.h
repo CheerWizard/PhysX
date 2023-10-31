@@ -208,7 +208,7 @@ struct PxCookingParams
 	float		areaTestEpsilon;
 
 	/**
-	\brief Plane tolerance used in convex hull computation.
+	\brief sPlane tolerance used in convex hull computation.
 
 	The value is used during hull construction. When a new point is about to be added to the hull it
 	gets dropped when the point is closer to the hull than the planeTolerance. The planeTolerance
@@ -343,7 +343,7 @@ struct PxCookingParams
 	PxMidphaseDesc midphaseDesc;
 
 	/**
-	\brief Vertex limit beyond which additional acceleration structures are computed for each convex mesh. Increase that limit to reduce memory usage.
+	\brief sVertex limit beyond which additional acceleration structures are computed for each convex mesh. Increase that limit to reduce memory usage.
 	Computing the extra structures all the time does not guarantee optimal performance. There is a per-platform break-even point below which the
 	extra structures actually hurt performance.
 
@@ -588,7 +588,7 @@ The provided PxAllocatorCallback does allocate the out arrays. It is the user re
 PX_C_EXPORT PX_PHYSX_COOKING_API	bool PxComputeHullPolygons(const physx::PxCookingParams& params, const physx::PxSimpleTriangleMesh& mesh, physx::PxAllocatorCallback& inCallback, physx::PxU32& nbVerts, physx::PxVec3*& vertices,
 														physx::PxU32& nbIndices, physx::PxU32*& indices, physx::PxU32& nbPolygons, physx::PxHullPolygon*& hullPolygons);
 
-// ==== Triangle meshes ====
+// ==== sTriangle meshes ====
 
 /**
 \brief Verifies if the triangle mesh is valid. Prints an error message for each inconsistency found.

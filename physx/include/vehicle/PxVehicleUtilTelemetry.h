@@ -378,12 +378,12 @@ private:
 	PxVehicleGraph* mWheelGraphs;
 
 	/**
-	\brief Application point of tire forces.
+	\brief cApp point of tire forces.
 	*/
 	PxVec3* mTireforceAppPoints;
 
 	/**
-	\brief Application point of susp forces.
+	\brief cApp point of susp forces.
 	*/
 	PxVec3* mSuspforceAppPoints;
 

@@ -36,7 +36,7 @@ namespace physx
 {
 namespace Gu
 {
-	//! Vertex cloud reduction result structure
+	//! sVertex cloud reduction result structure
 	struct REDUCEDCLOUD
 	{
 		// Out

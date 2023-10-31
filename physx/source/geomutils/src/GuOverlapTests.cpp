@@ -213,7 +213,7 @@ static PX_FORCE_INLINE bool updateTriggerCache(bool overlap, TriggerCache* cache
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Sphere-vs-shape
+// sSphere-vs-shape
 
 static bool GeomOverlapCallback_SphereSphere(GU_OVERLAP_FUNC_PARAMS)
 {
@@ -308,7 +308,7 @@ static bool GeomOverlapCallback_SphereConvex(GU_OVERLAP_FUNC_PARAMS)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Plane-vs-shape
+// sPlane-vs-shape
 
 static bool GeomOverlapCallback_PlaneCapsule(GU_OVERLAP_FUNC_PARAMS)
 {

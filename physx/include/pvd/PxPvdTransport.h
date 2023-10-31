@@ -55,13 +55,13 @@ class PxPvdTransport
 	// connect, isConnected, disconnect, read, write, flush
 
 	/**
-	Connects to the Visual Debugger application.
+	Connects to the Visual cDebugManager application.
 	return True if success
 	*/
 	virtual bool connect() = 0;
 
 	/**
-	Disconnects from the Visual Debugger application.
+	Disconnects from the Visual cDebugManager application.
 	If we are still connected, this will kill the entire debugger connection.
 	*/
 	virtual void disconnect() = 0;

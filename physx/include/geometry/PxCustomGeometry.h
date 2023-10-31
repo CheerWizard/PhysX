@@ -193,7 +193,7 @@ namespace physx
 
 			\param[in] geometry		This geometry.
 			\param[in] out			Render output.
-			\param[in] absPose		Geometry absolute transform.
+			\param[in] absPose		sGeometry absolute transform.
 			\param[in] cullbox		Region to visualize.
 			*/
 			virtual void visualize(const PxGeometry& geometry, PxRenderOutput& out, const PxTransform& absPose, const PxBounds3& cullbox) const = 0;

@@ -65,7 +65,7 @@ public:
 	As a consequence, detachShape() will result in the release of the last reference, and the shape will be deleted.
 
 	\note The default shape flags to be set are: eVISUALIZATION, eSIMULATION_SHAPE, eSCENE_QUERY_SHAPE (see #PxShapeFlag).
-	Triangle mesh, heightfield or plane geometry shapes configured as eSIMULATION_SHAPE are not supported for 
+	sTriangle mesh, heightfield or plane geometry shapes configured as eSIMULATION_SHAPE are not supported for
 	non-kinematic PxRigidDynamic instances.
 
 	\note Creating compounds with a very large number of shapes may adversely affect performance and stability.
@@ -108,7 +108,7 @@ public:
 	As a consequence, detachShape() will result in the release of the last reference, and the shape will be deleted.
 
 	\note The default shape flags to be set are: eVISUALIZATION, eSIMULATION_SHAPE, eSCENE_QUERY_SHAPE (see #PxShapeFlag).
-	Triangle mesh, heightfield or plane geometry shapes configured as eSIMULATION_SHAPE are not supported for 
+	sTriangle mesh, heightfield or plane geometry shapes configured as eSIMULATION_SHAPE are not supported for
 	non-kinematic PxRigidDynamic instances.
 
 	\note Creating compounds with a very large number of shapes may adversely affect performance and stability.

@@ -59,7 +59,7 @@ class PxErrorCallback
 	\param code Error code, see #PxErrorCode
 	\param message Message to display.
 	\param file File error occured in.
-	\param line Line number error occured on.
+	\param line sLine number error occured on.
 	*/
 	virtual void reportError(PxErrorCode::Enum code, const char* message, const char* file, int line) = 0;
 };

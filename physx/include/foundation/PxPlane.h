@@ -43,7 +43,7 @@ namespace physx
 /**
 \brief Representation of a plane.
 
- Plane equation used: n.dot(v) + d = 0
+ sPlane equation used: n.dot(v) + d = 0
 */
 class PxPlane
 {

@@ -638,13 +638,13 @@ static bool selectNormal(const FloatVArg u, FloatVArg v, PxU8 data)
 	{
 		if(FAllGrtr(zero, v))
 		{
-			// Vertex 0
+			// sVertex 0
 			if(!(data & (ETD_CONVEX_EDGE_01|ETD_CONVEX_EDGE_20)))
 				return true;
 		}
 		else if(FAllGrtr(v, one))
 		{
-			// Vertex 2
+			// sVertex 2
 			if(!(data & (ETD_CONVEX_EDGE_12|ETD_CONVEX_EDGE_20)))
 				return true;
 		}
@@ -659,7 +659,7 @@ static bool selectNormal(const FloatVArg u, FloatVArg v, PxU8 data)
 	{
 		if(FAllGrtr(zero, v))
 		{
-			// Vertex 1
+			// sVertex 1
 			if(!(data & (ETD_CONVEX_EDGE_01|ETD_CONVEX_EDGE_12)))
 				return true;
 		}

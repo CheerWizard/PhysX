@@ -453,8 +453,8 @@ bool Gu::sweepSphereVSTri(const PxVec3* PX_RESTRICT triVerts, const PxVec3& norm
 	}
 }
 
-bool Gu::sweepSphereTriangles(	PxU32 nbTris, const PxTriangle* PX_RESTRICT triangles,							// Triangle data
-								const PxVec3& center, const PxReal radius,										// Sphere data
+bool Gu::sweepSphereTriangles(	PxU32 nbTris, const PxTriangle* PX_RESTRICT triangles,							// sTriangle data
+								const PxVec3& center, const PxReal radius,										// sSphere data
 								const PxVec3& unitDir, PxReal distance,											// Ray data
 								const PxU32* PX_RESTRICT cachedIndex,											// Cache data
 								PxGeomSweepHit& h, PxVec3& triNormalOut,										// Results
@@ -611,7 +611,7 @@ static PX_FORCE_INLINE PxU32 rayQuadSpecial3(const PxVec3& orig, const PxVec3& o
 
 bool Gu::sweepSphereVSQuad(const PxVec3* PX_RESTRICT quadVerts, const PxVec3& normal, const PxVec3& center, float radius, const PxVec3& dir, float& impactDistance)
 {
-	// Quad formed by 2 tris:
+	// sQuad formed by 2 tris:
 	// p0 p1 p2
 	// p2 p1 p3 = p3 p2 p1
 	//

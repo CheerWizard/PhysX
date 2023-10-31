@@ -101,7 +101,7 @@ namespace physx
 		PxBoundedData numVerticesPerStrand;
 
 		/**
-		\brief Vertex positions and inverse mass [x,y,z,1/m] in PxBoundedData format.
+		\brief sVertex positions and inverse mass [x,y,z,1/m] in PxBoundedData format.
 			If count equal to numStrands, assumed to be strand root positions,
 			otherwise positions of all vertices sorted by strands and increasing
 			from root towards tip of strand.
@@ -112,7 +112,7 @@ namespace physx
 		PxBoundedData vertices;
 
 		/**
-		\brief Vertex velocities in PxBoundedData format.
+		\brief sVertex velocities in PxBoundedData format.
 			If NULL, zero velocity is assumed.
 			Type assumed to be of PxReal.
 

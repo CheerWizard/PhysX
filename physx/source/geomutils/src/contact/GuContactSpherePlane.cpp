@@ -41,7 +41,7 @@ bool Gu::contactSpherePlane(GU_CONTACT_METHOD_ARGS)
 	const PxSphereGeometry& shapeSphere = checkedCast<PxSphereGeometry>(shape0);
 	//const PxPlaneGeometry& shapePlane = checkedCast<PxPlaneGeometry>(shape1);
 
-	//Sphere in plane space
+	//sSphere in plane space
 	const PxVec3 sphere = transform1.transformInv(transform0.p);
 	
 	//Make sure we have a normalized plane

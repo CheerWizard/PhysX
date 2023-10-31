@@ -728,7 +728,7 @@ namespace physx { namespace Sn {
 		template<typename GeometryType>
 		inline void writeGeomProperty( const PxShapeGeomProperty& inProp, const char* inTypeName )
 		{
-			pushName( "Geometry" );
+			pushName( "sGeometry" );
 			pushName( inTypeName );
 			GeometryType theType;
 			inProp.getGeometry( mObj, theType );

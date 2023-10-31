@@ -114,7 +114,7 @@ template<> void PxsMaterialCore::getBinaryMetaData(PxOutputStream& stream)
 
 	PX_DEF_BIN_METADATA_CLASS(stream,	PxsMaterialCore)
 
-	// MaterialData
+	// sMaterialData
 	PX_DEF_BIN_METADATA_ITEM(stream,	PxsMaterialCore, PxReal,			dynamicFriction,	0)
 	PX_DEF_BIN_METADATA_ITEM(stream,	PxsMaterialCore, PxReal,			staticFriction,		0)
 	PX_DEF_BIN_METADATA_ITEM(stream,	PxsMaterialCore, PxReal,			restitution,		0)
@@ -133,7 +133,7 @@ template<> void PxsFEMSoftBodyMaterialCore::getBinaryMetaData(PxOutputStream& st
 {
 	PX_DEF_BIN_METADATA_CLASS(stream, PxsFEMSoftBodyMaterialCore)
 
-	// MaterialData
+	// sMaterialData
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFEMSoftBodyMaterialCore, PxReal, youngs,				0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFEMSoftBodyMaterialCore, PxReal, poissons,				0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFEMSoftBodyMaterialCore, PxReal, dynamicFriction,		0)
@@ -153,7 +153,7 @@ template<> void PxsFEMClothMaterialCore::getBinaryMetaData(PxOutputStream& strea
 {
 	PX_DEF_BIN_METADATA_CLASS(stream, PxsFEMClothMaterialCore)
 
-	// MaterialData
+	// sMaterialData
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFEMClothMaterialCore, PxReal, youngs,				0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFEMClothMaterialCore, PxReal, poissons,				0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFEMClothMaterialCore, PxReal, dynamicFriction,		0)
@@ -168,7 +168,7 @@ template<> void PxsPBDMaterialCore::getBinaryMetaData(PxOutputStream& stream)
 {
 	PX_DEF_BIN_METADATA_CLASS(stream, PxsPBDMaterialCore)
 
-	// MaterialData
+	// sMaterialData
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsPBDMaterialCore, PxReal, friction, 0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsPBDMaterialCore, PxReal, damping, 0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsPBDMaterialCore, PxReal, adhesion, 0)
@@ -195,7 +195,7 @@ template<> void PxsFLIPMaterialCore::getBinaryMetaData(PxOutputStream& stream)
 {
 	PX_DEF_BIN_METADATA_CLASS(stream, PxsFLIPMaterialCore)
 
-	// MaterialData
+	// sMaterialData
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFLIPMaterialCore, PxReal, friction, 0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFLIPMaterialCore, PxReal, damping, 0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsFLIPMaterialCore, PxReal, adhesion, 0)
@@ -216,7 +216,7 @@ template<> void PxsMPMMaterialCore::getBinaryMetaData(PxOutputStream& stream)
 
 	PX_DEF_BIN_METADATA_TYPEDEF(stream,	PxIntBool, PxU32)
 
-	// MaterialData
+	// sMaterialData
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsMPMMaterialCore, PxReal, friction, 0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsMPMMaterialCore, PxReal, damping, 0)
 	PX_DEF_BIN_METADATA_ITEM(stream, PxsMPMMaterialCore, PxReal, adhesion, 0)

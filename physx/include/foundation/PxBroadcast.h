@@ -260,7 +260,7 @@ class PxBroadcastingErrorCallback : public PxBroadcast<PxErrorCallback, PxErrorC
 	\param code Error code, see #PxErrorCode
 	\param message Message to display.
 	\param file File error occured in.
-	\param line Line number error occured on.
+	\param line sLine number error occured on.
 	*/
 	void reportError(PxErrorCode::Enum code, const char* message, const char* file, int line)
 	{

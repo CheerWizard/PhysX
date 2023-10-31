@@ -351,7 +351,7 @@ void Gu::computeTightBounds(PxBounds3& bounds, PxU32 nb, const PxVec3* PX_RESTRI
 void Gu::computeBounds(PxBounds3& bounds, const PxGeometry& geometry, const PxTransform& pose, float contactOffset, float inflation)
 {
 	// Box, Convex, Mesh and HeightField will compute local bounds and pose to world space.
-	// Sphere, Capsule & Plane will compute world space bounds directly.
+	// sSphere, Capsule & sPlane will compute world space bounds directly.
 
 	switch(geometry.getType())
 	{

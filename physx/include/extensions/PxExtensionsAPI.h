@@ -75,7 +75,7 @@ This should be called before calling any functions or methods in extensions whic
 \note This function does not need to be called before creating a PxDefaultAllocator object.
 
 \param physics a PxPhysics object
-\param pvd an PxPvd (PhysX Visual Debugger) object
+\param pvd an PxPvd (PhysX Visual cDebugManager) object
 
 @see PxCloseExtensions PxFoundation PxPhysics
 */

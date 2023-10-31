@@ -53,7 +53,7 @@ bool Gu::sweepSphereCapsule(const Sphere& sphere, const Capsule& lss, const PxVe
 
 	if(lss.p0 == lss.p1)
 	{
-		// Sphere vs. sphere
+		// sSphere vs. sphere
 		if(sweepSphereSphere(sphere.center, sphere.radius, lss.p0, lss.radius, -dir*length, d, nrm))
 		{
 			d*=length;

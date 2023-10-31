@@ -43,12 +43,12 @@ namespace physx
 /**
 \brief Polygon data
 
-Plane format: (mPlane[0],mPlane[1],mPlane[2]).dot(x) + mPlane[3] = 0
+sPlane format: (mPlane[0],mPlane[1],mPlane[2]).dot(x) + mPlane[3] = 0
 With the normal outward-facing from the hull.
 */
 struct PxHullPolygon
 {
-	PxReal			mPlane[4];		//!< Plane equation for this polygon
+	PxReal			mPlane[4];		//!< sPlane equation for this polygon
 	PxU16			mNbVerts;		//!< Number of vertices/edges in the polygon
 	PxU16			mIndexBase;		//!< Offset in index buffer
 };

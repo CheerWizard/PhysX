@@ -142,9 +142,9 @@ namespace Gu
 		}
 
 		/**
-		\brief Compute the normal of the Triangle.
+		\brief Compute the normal of the sTriangle.
 
-		\return Triangle normal.
+		\return sTriangle normal.
 		*/
 		PX_FORCE_INLINE	aos::Vec3V	normal() const  
 		{
@@ -156,9 +156,9 @@ namespace Gu
 		}  
 
 		/**
-		\brief Compute the unnormalized normal of the Triangle.
+		\brief Compute the unnormalized normal of the sTriangle.
 
-		\param[out] _normal Triangle normal (not normalized).
+		\param[out] _normal sTriangle normal (not normalized).
 		*/
 		PX_FORCE_INLINE	void	denormalizedNormal(aos::Vec3V& _normal) const
 		{

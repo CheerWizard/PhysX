@@ -54,7 +54,7 @@ struct PxMeshGeometryFlag
 		eTIGHT_BOUNDS = (1<<0),	//!< Use tighter (but more expensive to compute) bounds around the triangle mesh geometry.
 		eDOUBLE_SIDED = (1<<1)	//!< Meshes with this flag set are treated as double-sided.
 								//!< This flag is currently only used for raycasts and sweeps (it is ignored for overlap queries).
-								//!< For detailed specifications of this flag for meshes and heightfields please refer to the Geometry Query section of the user guide.
+								//!< For detailed specifications of this flag for meshes and heightfields please refer to the sGeometry Query section of the user guide.
 	};
 };
 
@@ -67,7 +67,7 @@ typedef PxFlags<PxMeshGeometryFlag::Enum,PxU8> PxMeshGeometryFlags;
 PX_FLAGS_OPERATORS(PxMeshGeometryFlag::Enum,PxU8)
 
 /**
-\brief Triangle mesh geometry class.
+\brief sTriangle mesh geometry class.
 
 This class unifies a mesh object with a scaling transform, and 
 lets the combined object be used anywhere a PxGeometry is needed.

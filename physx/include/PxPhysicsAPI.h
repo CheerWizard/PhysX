@@ -115,7 +115,7 @@ Alternatively, one can instead directly #include a subset of the below files.
 #include "common/PxSerialFramework.h"
 #include "common/PxInsertionCallback.h"
 
-//Task Manager
+//sTask Manager
 #include "task/PxTask.h"
 
 // Cuda Mananger
@@ -123,7 +123,7 @@ Alternatively, one can instead directly #include a subset of the below files.
 #include "gpu/PxGpu.h"
 #endif
 
-//Geometry Library
+//sGeometry Library
 #include "geometry/PxBoxGeometry.h"
 #include "geometry/PxBVH.h"
 #include "geometry/PxBVHBuildStrategy.h"
@@ -244,7 +244,7 @@ Alternatively, one can instead directly #include a subset of the below files.
 #include "vehicle/PxVehicleNoDrive.h"
 #include "vehicle/PxVehicleDriveNW.h"
 
-//Connecting the SDK to Visual Debugger
+//Connecting the SDK to Visual cDebugManager
 #include "pvd/PxPvdSceneClient.h"
 #include "pvd/PxPvd.h"
 #include "pvd/PxPvdTransport.h"

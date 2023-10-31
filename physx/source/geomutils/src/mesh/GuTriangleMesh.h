@@ -251,7 +251,7 @@ public:
 								// End of SDF data ------------------
 
 								void					setAllEdgesActive();
-								//Vertex mapping data
+								//sVertex mapping data
 								PxU32*					mAccumulatedTrianglesRef;//runsum
 								PxU32*					mTrianglesReferences;
 								PxU32					mNbTrianglesReferences;

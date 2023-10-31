@@ -147,7 +147,7 @@ namespace Gu
 		float tfirst = -FLT_MAX;
 		float tlast  = FLT_MAX;
 
-		// Triangle normal
+		// sTriangle normal
 		if(!testAxis(tri, extents, dir, normal, bValidMTD, tfirst, tlast))
 			return 0;
 

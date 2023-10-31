@@ -202,7 +202,7 @@ static FloatV pcmDistancePointTriangleSquared(	const Vec3VArg p,
 
 	if(BAllEqTTTT(con0))
 	{
-		//Vertex 0
+		//sVertex 0
 		fc = FC_VERTEX0;
 		closestP = a;
 		return V3Dot(ap, ap);
@@ -214,7 +214,7 @@ static FloatV pcmDistancePointTriangleSquared(	const Vec3VArg p,
 	const BoolV con1 = BAnd(con10, con11); // vertex region b
 	if(BAllEqTTTT(con1))
 	{
-		//Vertex 1
+		//sVertex 1
 		fc = FC_VERTEX1;
 		closestP = b;
 		return V3Dot(bp, bp);
@@ -226,7 +226,7 @@ static FloatV pcmDistancePointTriangleSquared(	const Vec3VArg p,
 	const BoolV con2 = BAnd(con20, con21); // vertex region c
 	if(BAllEqTTTT(con2))
 	{
-		//Vertex 2
+		//sVertex 2
 		fc = FC_VERTEX2;
 		closestP = c;
 		return V3Dot(cp, cp);

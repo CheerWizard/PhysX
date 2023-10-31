@@ -44,11 +44,11 @@ bool Gu::intersectEdgeEdge(const PxVec3& p1, const PxVec3& p2, const PxVec3& dir
 	// same as if p3 and p4 on same side of plane return 0
 	//
 	// Derivation:
-	// d3 = d(p3, P) = (p3 | plane.n) - plane.d;		Reversed sign compared to Plane::Distance() because plane.d is negated.
-	// d4 = d(p4, P) = (p4 | plane.n) - plane.d;		Reversed sign compared to Plane::Distance() because plane.d is negated.
+	// d3 = d(p3, P) = (p3 | plane.n) - plane.d;		Reversed sign compared to sPlane::Distance() because plane.d is negated.
+	// d4 = d(p4, P) = (p4 | plane.n) - plane.d;		Reversed sign compared to sPlane::Distance() because plane.d is negated.
 	// if d3 and d4 have the same sign, they're on the same side of the plane => no collision
 	// We test both sides at the same time by only testing Sign(d3 * d4).
-	// ### put that in the Plane class
+	// ### put that in the sPlane class
 	// ### also check that code in the triangle class that might be similar
 	const PxReal d3 = plane.distance(p3);
 	PxReal temp = d3 * plane.distance(p4);

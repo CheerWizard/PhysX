@@ -286,7 +286,7 @@ namespace physx
 	{
 		NpShape* npShape = static_cast<NpShape*>(&shape);
 
-		PX_CHECK_AND_RETURN_NULL(npShape->getGeometryTypeFast() == PxGeometryType::eTETRAHEDRONMESH, "NpSoftBody::attachShape: Geometry type must be tetrahedron mesh geometry");
+		PX_CHECK_AND_RETURN_NULL(npShape->getGeometryTypeFast() == PxGeometryType::eTETRAHEDRONMESH, "NpSoftBody::attachShape: sGeometry type must be tetrahedron mesh geometry");
 		PX_CHECK_AND_RETURN_NULL(mShape == NULL, "NpSoftBody::attachShape: soft body can just have one shape");
 		PX_CHECK_AND_RETURN_NULL(shape.isExclusive(), "NpSoftBody::attachShape: shape must be exclusive");
 		PX_CHECK_AND_RETURN_NULL(npShape->getCore().getCore().mShapeCoreFlags & PxShapeCoreFlag::eSOFT_BODY_SHAPE, "NpSoftBody::attachShape: shape must be a soft body shape!");

@@ -66,7 +66,7 @@ namespace Cm
 		virtual void runInternal()=0;
 	};
 
-	// same as Cm::Task but inheriting from physx::PxBaseTask
+	// same as Cm::sTask but inheriting from physx::PxBaseTask
 	// instead of PxLightCpuTask
 	class BaseTask : public physx::PxBaseTask
 	{

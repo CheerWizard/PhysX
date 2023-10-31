@@ -122,7 +122,7 @@ public:
 	void*	graphicsDevice;
 
 	/**
-	  * \brief Application-specific GUID
+	  * \brief cApp-specific GUID
 	  *
 	  * If your application employs PhysX modules that use CUDA you need to use a GUID 
 	  * so that patches for new architectures can be released for your game.You can obtain a GUID for your 
@@ -131,7 +131,7 @@ public:
 	const char*	appGUID;
 
 	/**
-	  * \brief Application-specific device memory allocator
+	  * \brief cApp-specific device memory allocator
 	  *
 	  * the application can implement an device memory allocator, which inherites PxDeviceAllocatorCallback, and 
 	  * pass that to the PxCudaContextManagerDesc. The SDK will use that allocator to allocate device memory instead of

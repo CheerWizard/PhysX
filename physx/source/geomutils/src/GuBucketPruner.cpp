@@ -1864,7 +1864,7 @@ private:
 #else
 struct SphereAABBTest_Scalar
 {
-	PX_FORCE_INLINE SphereAABBTest_Scalar(const Sphere& sphere) :
+	PX_FORCE_INLINE SphereAABBTest_Scalar(const sSphere& sphere) :
 		mCenter	(sphere.center),
 		mRadius2(sphere.radius * sphere.radius)
 	{}

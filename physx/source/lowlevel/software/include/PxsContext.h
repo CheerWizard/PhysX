@@ -114,7 +114,7 @@ public:
 
 	PX_FORCE_INLINE	void						setContactDistance(const PxFloatArrayPinned* contactDistances)	{ mContactDistances = contactDistances;	}
 
-	// Task-related
+	// sTask-related
 					void						updateContactManager(PxReal dt, bool hasContactDistanceChanged, PxBaseTask* continuation, 
 																	PxBaseTask* firstPassContinuation, Cm::FanoutTask* updateBoundAndShapeTask);
 					void						secondPassUpdateContactManager(PxReal dt, PxBaseTask* continuation);

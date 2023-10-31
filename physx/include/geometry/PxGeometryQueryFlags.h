@@ -38,7 +38,7 @@ namespace physx
 #endif
 
 	/**
-	\brief Geometry-level query flags.
+	\brief sGeometry-level query flags.
 
 	@see PxScene::raycast PxScene::overlap PxScene::sweep PxBVH::raycast PxBVH::overlap PxBVH::sweep PxGeometryQuery::raycast PxGeometryQuery::overlap PxGeometryQuery::sweep
 	@see PxGeometryQuery::computePenetration PxGeometryQuery::pointDistance PxGeometryQuery::computeGeomBounds

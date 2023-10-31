@@ -743,7 +743,7 @@ private:
 	bool isValid() const;
 
 	/**
-	\brief Shader data and function for tire force calculations.
+	\brief sShader data and function for tire force calculations.
 	*/
 	PxVehicleTireForceCalculator* mTireForceCalculators;
 	

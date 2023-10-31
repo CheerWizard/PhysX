@@ -471,9 +471,9 @@ bool BV4Tree::refit(PxBounds3& globalBounds, float epsilon)
 					PX_ASSERT(primIndex<mMeshInterface->getNbTriangles());
 					mMeshInterface->getTriangle(VP, primIndex);
 
-					const Vec4V v0V = V4LoadU(&VP.Vertex[0]->x);	
-					const Vec4V v1V = V4LoadU(&VP.Vertex[1]->x);
-					const Vec4V v2V = V4LoadU(&VP.Vertex[2]->x);
+					const Vec4V v0V = V4LoadU(&VP.sVertex[0]->x);
+					const Vec4V v1V = V4LoadU(&VP.sVertex[1]->x);
+					const Vec4V v2V = V4LoadU(&VP.sVertex[2]->x);
 					minV = V4Min(minV, v0V);
 					minV = V4Min(minV, v1V);
 					minV = V4Min(minV, v2V);
@@ -641,9 +641,9 @@ bool BV4Tree::refit(PxBounds3& globalBounds, float epsilon)
 					minV = V4Min(minV, tMin);
 					maxV = V4Max(maxV, tMax);
 
-				/*	const Vec4V v0V = V4LoadU(&VP.Vertex[0]->x);	
-					const Vec4V v1V = V4LoadU(&VP.Vertex[1]->x);
-					const Vec4V v2V = V4LoadU(&VP.Vertex[2]->x);
+				/*	const Vec4V v0V = V4LoadU(&VP.sVertex[0]->x);
+					const Vec4V v1V = V4LoadU(&VP.sVertex[1]->x);
+					const Vec4V v2V = V4LoadU(&VP.sVertex[2]->x);
 					minV = V4Min(minV, v0V);
 					minV = V4Min(minV, v1V);
 					minV = V4Min(minV, v2V);

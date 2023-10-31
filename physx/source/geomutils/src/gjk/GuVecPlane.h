@@ -39,7 +39,7 @@
 /**
 \brief Representation of a plane.
 
-Plane equation used: a*x + b*y + c*z + d = 0
+sPlane equation used: a*x + b*y + c*z + d = 0
 */
 namespace physx
 {

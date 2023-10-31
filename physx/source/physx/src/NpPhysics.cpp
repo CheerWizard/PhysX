@@ -384,7 +384,7 @@ PxScene* NpPhysics::createScene(const PxSceneDesc& desc)
 	}
 	if(!npScene->getTaskManagerFast())
 	{
-		mFoundation.error(PxErrorCode::eINTERNAL_ERROR, PX_FL, "Unable to create scene. Task manager creation failed.");
+		mFoundation.error(PxErrorCode::eINTERNAL_ERROR, PX_FL, "Unable to create scene. sTask manager creation failed.");
 		return NULL;
 	}
 

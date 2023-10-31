@@ -95,8 +95,8 @@ namespace Gu
 			return (center-p).magnitudeSquared() <= radius*radius;
 		}
 
-		PxVec3	center;		//!< Sphere's center
-		PxF32	radius;		//!< Sphere's radius
+		PxVec3	center;		//!< sSphere's center
+		PxF32	radius;		//!< sSphere's radius
 	};
 }
 

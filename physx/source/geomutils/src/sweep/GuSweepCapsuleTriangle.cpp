@@ -67,7 +67,7 @@ using namespace physx::aos;
 
 //#define NEW_VERSION
 
-bool Gu::sweepCapsuleTriangles_Precise(	PxU32 nbTris, const PxTriangle* PX_RESTRICT triangles,	// Triangle data
+bool Gu::sweepCapsuleTriangles_Precise(	PxU32 nbTris, const PxTriangle* PX_RESTRICT triangles,	// sTriangle data
 										const Capsule& capsule,									// Capsule data
 										const PxVec3& unitDir, const PxReal distance,			// Ray data
 										const PxU32* PX_RESTRICT cachedIndex,					// Cache data

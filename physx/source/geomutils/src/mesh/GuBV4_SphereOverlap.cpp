@@ -42,7 +42,7 @@ using namespace physx::aos;
 #pragma warning ( disable : 4324 )
 #endif
 
-// Sphere overlap any
+// sSphere overlap any
 
 struct SphereParams
 {
@@ -199,7 +199,7 @@ PxIntBool BV4_OverlapSphereAny(const Sphere& sphere, const BV4Tree& tree, const 
 	}
 }
 
-// Sphere overlap all
+// sSphere overlap all
 
 struct SphereParamsAll : SphereParams
 {
@@ -257,7 +257,7 @@ PxU32 BV4_OverlapSphereAll(const Sphere& sphere, const BV4Tree& tree, const PxMa
 }
 
 
-// Sphere overlap - callback version
+// sSphere overlap - callback version
 
 struct SphereParamsCB : SphereParams
 {

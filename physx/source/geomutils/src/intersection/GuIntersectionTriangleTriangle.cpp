@@ -34,7 +34,7 @@ using namespace Gu;
 
 namespace
 {
-	//Based on the paper A Fast Triangle-Triangle Intersection Test by T. Moeller
+	//Based on the paper A Fast sTriangle-sTriangle Intersection Test by T. Moeller
 	//http://web.stanford.edu/class/cs277/resources/papers/Moller1997b.pdf
 	struct Interval
 	{
