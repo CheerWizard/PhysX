@@ -111,7 +111,7 @@ void setPxRackAndPinionJoint_Ratio( PxRackAndPinionJoint* inObj, float inArg){ i
 float getPxRackAndPinionJoint_Ratio( const PxRackAndPinionJoint* inObj ) { return inObj->getRatio(); }
 const char * getPxRackAndPinionJoint_ConcreteTypeName( const PxRackAndPinionJoint* inObj ) { return inObj->getConcreteTypeName(); }
  PxRackAndPinionJointGeneratedInfo::PxRackAndPinionJointGeneratedInfo()
-	: Ratio( "Ratio", setPxRackAndPinionJoint_Ratio, getPxRackAndPinionJoint_Ratio)
+	: Ratio( "AspectRatio", setPxRackAndPinionJoint_Ratio, getPxRackAndPinionJoint_Ratio)
 	, ConcreteTypeName( "ConcreteTypeName", getPxRackAndPinionJoint_ConcreteTypeName)
 {}
  PxRackAndPinionJointGeneratedValues::PxRackAndPinionJointGeneratedValues( const PxRackAndPinionJoint* inSource )

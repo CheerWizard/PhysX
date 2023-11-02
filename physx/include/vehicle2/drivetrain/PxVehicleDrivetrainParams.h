@@ -503,7 +503,7 @@ public:
 	PxU32 rearWheelIds[2];
 
 	/**
-	\brief Ratio of torque split between front and rear wheels (>0.5 means more front, <0.5 means more to rear).
+	\brief AspectRatio of torque split between front and rear wheels (>0.5 means more front, <0.5 means more to rear).
 
 	\note Only applied to DIFF_TYPE_LS_4WD
 
@@ -512,7 +512,7 @@ public:
 	PxReal frontRearSplit;
 
 	/**
-	\brief Ratio of torque split between front-negative and front-positive wheels (>0.5 means more to #frontWheelIds[0], <0.5 means more to #frontWheelIds[1]).
+	\brief AspectRatio of torque split between front-negative and front-positive wheels (>0.5 means more to #frontWheelIds[0], <0.5 means more to #frontWheelIds[1]).
 
 	\note Only applied to DIFF_TYPE_LS_4WD and DIFF_TYPE_LS_FRONTWD
 
@@ -521,7 +521,7 @@ public:
 	PxReal frontNegPosSplit;
 
 	/**
-	\brief Ratio of torque split between rear-negative wheel and rear-positive wheels (>0.5 means more to #rearWheelIds[0], <0.5 means more to #rearWheelIds[1]).
+	\brief AspectRatio of torque split between rear-negative wheel and rear-positive wheels (>0.5 means more to #rearWheelIds[0], <0.5 means more to #rearWheelIds[1]).
 
 	\note Only applied to DIFF_TYPE_LS_4WD and eDIFF_TYPE_LS_REARWD
 

@@ -452,7 +452,7 @@ public:
 	}
 
 	/**
-	\brief Ratio of torque split between front and rear (>0.5 means more to front, <0.5 means more to rear).
+	\brief AspectRatio of torque split between front and rear (>0.5 means more to front, <0.5 means more to rear).
 	
 	\note Only applied to DIFF_TYPE_LS_4WD and eDIFF_TYPE_OPEN_4WD
 
@@ -461,7 +461,7 @@ public:
 	PxReal mFrontRearSplit;
 
 	/**
-	\brief Ratio of torque split between front-left and front-right (>0.5 means more to front-left, <0.5 means more to front-right).
+	\brief AspectRatio of torque split between front-left and front-right (>0.5 means more to front-left, <0.5 means more to front-right).
 	
 	\note Only applied to DIFF_TYPE_LS_4WD and eDIFF_TYPE_OPEN_4WD and eDIFF_TYPE_LS_FRONTWD
 
@@ -470,7 +470,7 @@ public:
 	PxReal mFrontLeftRightSplit;
 
 	/**
-	\brief Ratio of torque split between rear-left and rear-right (>0.5 means more to rear-left, <0.5 means more to rear-right).
+	\brief AspectRatio of torque split between rear-left and rear-right (>0.5 means more to rear-left, <0.5 means more to rear-right).
 	
 	\note Only applied to DIFF_TYPE_LS_4WD and eDIFF_TYPE_OPEN_4WD and eDIFF_TYPE_LS_REARWD
 
