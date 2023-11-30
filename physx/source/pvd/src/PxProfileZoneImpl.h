@@ -121,7 +121,7 @@ namespace physx { namespace profile {
 
 		virtual void flushEventIdNameMap()
 		{
-			// copy the RW map into R map
+			// copy the UAV map into R map
 			if (mNameToEvtIndexMapRW.size())
 			{
 				for (TNameToEvtIndexMap::Iterator iter = mNameToEvtIndexMapRW.getIterator(); !iter.done(); ++iter)
